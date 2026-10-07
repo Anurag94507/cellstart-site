@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us & Sustainability — CellStart</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.svg" alt="CellStart Logo" class="logo-icon" />
+        <span class="brand-text">Cell<span>Start</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="features.html">Technology</a>
+        <a href="shop.html">Shop</a>
+        <a href="testimonials.html">Reviews</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle-btn">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+        <button class="icon-btn" onclick="CellStart.openCart()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section" style="padding-top:3.5rem">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan" style="margin-bottom:0.5rem">⚡ Our Origin & Vision</div>
+        <h1 style="font-family:var(--font-heading);font-size:2.8rem;font-weight:900;margin-bottom:0.75rem">Born to Fix Broken Charging</h1>
+        <p>We started CellStart with a simple frustration: frayed rubber cables, slow charging bricks, and wasteful throwaway tech.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2rem;margin-bottom:4rem">
+        <div class="card">
+          <div style="font-size:2.2rem;margin-bottom:1rem">🌱</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.35rem;margin-bottom:0.5rem">100% Recyclable Packaging</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6">We eliminated all single-use plastics from our retail boxes, using FSC-certified unbleached kraft paper and soy-based non-toxic inks.</p>
+        </div>
+
+        <div class="card">
+          <div style="font-size:2.2rem;margin-bottom:1rem">🛡️</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.35rem;margin-bottom:0.5rem">Engineered for 5+ Years</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6">The greenest charging cable is the one you never need to replace. By building with Kevlar weave and GaN semiconductors, we keep e-waste out of landfills.</p>
+        </div>
+
+        <div class="card">
+          <div style="font-size:2.2rem;margin-bottom:1rem">⚡</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.35rem;margin-bottom:0.5rem">Open PD Standards</h3>
+          <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6">We believe in universal USB-IF Power Delivery standards so one single CellStart charger powers all your hardware seamlessly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 CellStart Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Shopping Bag</h3>
+      <button class="icon-btn" onclick="CellStart.closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <button id="checkout-btn" class="btn btn-primary btn-block" onclick="CellStart.openCheckoutModal()">Proceed to Checkout 🔒</button>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

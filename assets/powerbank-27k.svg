@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg27" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="titanium" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg27)" rx="16"/>
+
+  <ellipse cx="300" cy="350" rx="160" ry="24" fill="#020617" opacity="0.7"/>
+
+  <!-- Powerbank Heavy Body -->
+  <rect x="180" y="80" width="240" height="250" rx="30" fill="url(#titanium)" stroke="#0ea5e9" stroke-width="2"/>
+
+  <!-- High-Def Color TFT Smart Screen -->
+  <rect x="210" y="110" width="180" height="110" rx="14" fill="#020617" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="230" y="145" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="900">100%</text>
+  <text x="320" y="140" fill="#10b981" font-family="system-ui" font-size="12" font-weight="bold">140.0W MAX</text>
+  <text x="320" y="155" fill="#94a3b8" font-family="system-ui" font-size="10">28V / 5A EPR</text>
+  <line x1="225" y1="170" x2="375" y2="170" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="230" y="195" fill="#f59e0b" font-family="system-ui" font-size="11" font-weight="700">IN: 140W (35m to Full)</text>
+
+  <!-- Dual USB-C 140W Ports + 1x USB-A -->
+  <rect x="210" y="240" width="45" height="18" rx="8" fill="#020617" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="275" y="240" width="45" height="18" rx="8" fill="#020617" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="340" y="239" width="50" height="20" rx="4" fill="#020617" stroke="#f59e0b" stroke-width="1.5"/>
+
+  <text x="300" y="300" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="11" font-weight="800" letter-spacing="3">27,650mAh • 99.6Wh AIRLINE SAFE</text>
+
+  <rect x="390" y="30" width="180" height="32" rx="16" fill="rgba(14, 165, 233, 0.15)" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="480" y="51" text-anchor="middle" fill="#0ea5e9" font-family="system-ui" font-size="12" font-weight="bold">⚡ 140W LAPTOP BEAST</text>
+</svg>

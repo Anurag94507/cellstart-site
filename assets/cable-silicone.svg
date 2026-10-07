@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="siliconeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="purpleBlur">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#siliconeBg)" rx="16"/>
+
+  <circle cx="300" cy="200" r="140" fill="#a855f7" opacity="0.1" filter="url(#purpleBlur)"/>
+
+  <!-- Fluid Silky Cable Loops -->
+  <path d="M 100,300 C 150,120 280,100 300,220 C 320,340 450,300 500,160" fill="none" stroke="#6366f1" stroke-width="26" stroke-linecap="round" opacity="0.4"/>
+  <path d="M 100,300 C 150,120 280,100 300,220 C 320,340 450,300 500,160" fill="none" stroke="#a855f7" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- Molded Silicone Connector Head 1 -->
+  <g transform="translate(110, 310) rotate(30)">
+    <rect x="-14" y="0" width="28" height="60" rx="14" fill="#a855f7" stroke="#c084fc" stroke-width="2"/>
+    <rect x="-10" y="-24" width="20" height="26" rx="4" fill="#cbd5e1"/>
+    <circle cx="0" cy="28" r="4" fill="#ffffff"/>
+  </g>
+
+  <!-- Molded Silicone Connector Head 2 -->
+  <g transform="translate(490, 150) rotate(-60)">
+    <rect x="-14" y="0" width="28" height="60" rx="14" fill="#a855f7" stroke="#c084fc" stroke-width="2"/>
+    <rect x="-10" y="-24" width="20" height="26" rx="4" fill="#cbd5e1"/>
+    <circle cx="0" cy="28" r="4" fill="#ffffff"/>
+  </g>
+
+  <!-- Badge in corner -->
+  <rect x="420" y="30" width="150" height="32" rx="16" fill="rgba(168, 85, 247, 0.15)" stroke="#a855f7" stroke-width="1"/>
+  <text x="495" y="51" text-anchor="middle" fill="#c084fc" font-family="system-ui" font-size="12" font-weight="bold">⚡ 240W EPR POWER</text>
+</svg>

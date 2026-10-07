@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgCar)" rx="16"/>
+
+  <!-- Mount Body with Motorized Clamps -->
+  <rect x="230" y="110" width="140" height="190" rx="24" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="245" y="125" width="110" height="160" rx="16" fill="#0f172a"/>
+
+  <!-- Glowing Qi Coil in Center -->
+  <circle cx="300" cy="190" r="35" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="14 6"/>
+  <circle cx="300" cy="190" r="8" fill="#38bdf8"/>
+  <text x="300" y="240" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="bold">15W FAST QI</text>
+
+  <!-- Left Motorized Clamp Arm -->
+  <rect x="195" y="150" width="30" height="70" rx="8" fill="#334155" stroke="#64748b"/>
+  <!-- Right Motorized Clamp Arm -->
+  <rect x="375" y="150" width="30" height="70" rx="8" fill="#334155" stroke="#64748b"/>
+  <!-- Bottom Foot Support -->
+  <rect x="270" y="305" width="60" height="15" rx="6" fill="#334155"/>
+
+  <rect x="400" y="30" width="170" height="32" rx="16" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" stroke-width="1"/>
+  <text x="485" y="51" text-anchor="middle" fill="#38bdf8" font-family="system-ui" font-size="12" font-weight="bold">🚗 AUTO-CLAMP QI CAR</text>
+</svg>

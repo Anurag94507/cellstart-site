@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products Catalog — CellStart High-Speed Mobile & Electronic Gear</title>
+  <meta name="description" content="Explore CellStart GaN III fast chargers, 140W power banks, 240W cables, ANC earbuds, 10-in-1 docks, and MagSafe accessories." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar-promo">
+    <span>⚡ FLASH OFFER: Use code <strong>CELLSTART20</strong> for 20% OFF your entire bag!</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.svg" alt="CellStart Logo" class="logo-icon" />
+        <span class="brand-text">Cell<span>Start</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="features.html">Technology</a>
+        <a href="shop.html">Shop</a>
+        <a href="testimonials.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" onclick="CellStart.openSearchModal()" title="Search catalog">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+
+        <button class="icon-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+
+        <button class="icon-btn" onclick="CellStart.openCart()" title="View Bag">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-count-badge" style="display:none">0</span>
+        </button>
+
+        <button class="icon-btn mobile-menu-toggle" id="mobile-menu-toggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products Catalog Section -->
+  <section class="section" style="padding-top:3rem">
+    <div class="container">
+      <div class="section-header" style="text-align:left;max-width:100%;margin-bottom:2rem;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
+        <div>
+          <div class="badge badge-cyan" style="margin-bottom:0.5rem">⚡ Full Mobile & Electronics Catalog</div>
+          <h1 style="font-family:var(--font-heading);font-size:2.5rem;font-weight:800;margin-bottom:0.35rem">All Hardware, Audio & Accessories</h1>
+          <p style="color:var(--text-secondary)">Explore our full spectrum from 140W desktop power stations to small cable management clips.</p>
+        </div>
+        <div style="color:var(--brand-cyan);font-weight:700;font-size:0.95rem" id="catalog-count-label">Loading catalog...</div>
+      </div>
+
+      <!-- Category Filter Pills Bar -->
+      <div style="margin-bottom:1.5rem;overflow-x:auto;padding-bottom:0.5rem">
+        <div class="filter-pills" id="category-filter-pills" style="flex-wrap:nowrap;min-width:max-content">
+          <button class="filter-pill active" data-category="all" onclick="filterCatalog('all')">All Products (All Types)</button>
+          <button class="filter-pill" data-category="chargers" onclick="filterCatalog('chargers')">⚡ GaN Chargers</button>
+          <button class="filter-pill" data-category="powerbanks" onclick="filterCatalog('powerbanks')">🔋 Power Banks</button>
+          <button class="filter-pill" data-category="cables" onclick="filterCatalog('cables')">🧵 Heavy-Duty Cables</button>
+          <button class="filter-pill" data-category="wireless" onclick="filterCatalog('wireless')">🧲 Wireless & MagSafe</button>
+          <button class="filter-pill" data-category="audio" onclick="filterCatalog('audio')">🎧 Audio & Wearables</button>
+          <button class="filter-pill" data-category="hubs" onclick="filterCatalog('hubs')">🖥️ Hubs & Docks</button>
+          <button class="filter-pill" data-category="protection" onclick="filterCatalog('protection')">🛡️ Cases & Guards</button>
+          <button class="filter-pill" data-category="essentials" onclick="filterCatalog('essentials')">📎 Small Essentials</button>
+        </div>
+      </div>
+
+      <!-- Advanced Filter & Search Controls Bar -->
+      <div class="products-filter-bar">
+        <div style="display:flex;align-items:center;gap:0.75rem;flex:1;min-width:260px">
+          <input type="text" id="catalog-search-input" class="form-control" placeholder="Search by name, specs or category..." oninput="loadCatalog()" style="padding:0.5rem 1rem" />
+        </div>
+
+        <div style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:0.5rem">
+            <span style="font-size:0.85rem;color:var(--text-muted)">Max Price:</span>
+            <input type="range" id="price-range" min="300" max="8000" step="200" value="8000" oninput="document.getElementById('price-val').textContent = '₹' + this.value; loadCatalog()" style="width:110px" />
+            <strong id="price-val" style="font-size:0.85rem;color:var(--brand-cyan)">₹8000</strong>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:0.5rem">
+            <label style="font-size:0.85rem;color:var(--text-muted)">Sort:</label>
+            <select class="sort-select" id="catalog-sort" onchange="loadCatalog()">
+              <option value="popular">Most Popular</option>
+              <option value="rating">Highest Rated</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid of Products -->
+      <div class="products-grid" id="catalog-grid">
+        <div style="text-align:center;padding:4rem;grid-column:1/-1;color:var(--text-muted)">Loading products from REST API...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-link" style="margin-bottom:1rem">
+            <img src="assets/logo.svg" alt="CellStart" class="logo-icon" />
+            <span class="brand-text">Cell<span>Start</span></span>
+          </div>
+          <p style="color:var(--text-secondary);font-size:0.9rem">All electronic accessories and chargers backed by 1-year replacement warranty and instant UPI payments.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Electronics</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="filterCatalog('chargers')">GaN Wall Chargers</a></li>
+            <li><a href="#" onclick="filterCatalog('powerbanks')">Laptop Power Banks</a></li>
+            <li><a href="#" onclick="filterCatalog('audio')">ANC Wireless Earbuds</a></li>
+            <li><a href="#" onclick="filterCatalog('hubs')">Dual 4K Docks</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Accessories</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="filterCatalog('cables')">100W/240W Braided Cables</a></li>
+            <li><a href="#" onclick="filterCatalog('wireless')">MagSafe Charging Stands</a></li>
+            <li><a href="#" onclick="filterCatalog('protection')">Shockproof Armor Cases</a></li>
+            <li><a href="#" onclick="filterCatalog('essentials')">Cable Organizer Packs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Payment Protection</h4>
+          <p style="color:var(--text-secondary);font-size:0.85rem">Accepts UPI (Google Pay, PhonePe, Paytm), Visa/Mastercard Cards, NetBanking, and Cash on Delivery.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 CellStart Inc. All rights reserved. Powered by Express REST Gateway.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <h3>Your Shopping Bag</h3>
+      </div>
+      <button class="icon-btn" onclick="CellStart.closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <div style="display:flex;gap:0.5rem;margin-bottom:1rem">
+        <input type="text" id="coupon-input" class="form-control" placeholder="Promo code (e.g. CELLSTART20)" style="text-transform:uppercase" />
+        <button class="btn btn-secondary btn-sm" onclick="CellStart.applyCouponCode()">Apply</button>
+      </div>
+      <div class="cart-summary-line"><span>Subtotal</span><span id="cart-subtotal">₹0</span></div>
+      <div class="cart-summary-line" style="color:var(--brand-emerald)"><span>Coupon Discount</span><span id="cart-discount">-₹0</span></div>
+      <div class="cart-summary-line"><span>Express Delivery</span><span id="cart-shipping">₹99</span></div>
+      <div class="cart-total-line"><span>Estimated Total</span><span id="cart-total" style="color:var(--brand-cyan)">₹0</span></div>
+      <button id="checkout-btn" class="btn btn-primary btn-block" onclick="CellStart.openCheckoutModal()">Proceed to Checkout 🔒</button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-content" style="max-width:680px">
+      <button class="modal-close" onclick="document.getElementById('quickview-modal').classList.remove('open')">✕</button>
+      <div id="quickview-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content" style="max-width:560px">
+      <button class="modal-close" onclick="CellStart.closeSearchModal()">✕</button>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" class="form-control" placeholder="Search GaN chargers, cables, ANC earbuds..." oninput="CellStart.handleSearchInput(this.value)" />
+      </div>
+      <div id="search-modal-results" style="max-height:360px;overflow-y:auto"></div>
+    </div>
+  </div>
+
+  <!-- Checkout & Payment Modal -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-content" style="max-width:640px">
+      <button class="modal-close" onclick="CellStart.closeCheckoutModal()">✕</button>
+      <div id="checkout-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Live Tracking Modal -->
+  <div class="modal-overlay" id="tracking-modal">
+    <div class="modal-content" style="max-width:540px">
+      <button class="modal-close" onclick="document.getElementById('tracking-modal').classList.remove('open')">✕</button>
+      <div id="tracking-modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    let currentCategory = 'all';
+
+    async function loadCatalog() {
+      const sort = document.getElementById('catalog-sort').value;
+      const search = document.getElementById('catalog-search-input')?.value.trim() || '';
+      const maxPrice = document.getElementById('price-range')?.value || 8000;
+      const grid = document.getElementById('catalog-grid');
+      const countLabel = document.getElementById('catalog-count-label');
+
+      try {
+        let url = `/api/products?sort=${sort}&maxPrice=${maxPrice}`;
+        if (currentCategory !== 'all') {
+          url += `&category=${currentCategory}`;
+        }
+        if (search) {
+          url += `&search=${encodeURIComponent(search)}`;
+        }
+        const res = await fetch(url);
+        const data = await res.json();
+        
+        if (countLabel) countLabel.textContent = `Showing ${data.count} Products & Electronic Gear`;
+
+        if (data.products.length === 0) {
+          grid.innerHTML = '<div style="text-align:center;padding:4rem;grid-column:1/-1;color:var(--text-muted)">No items match your filter criteria. Try expanding price or category.</div>';
+          return;
+        }
+
+        grid.innerHTML = data.products.map(p => `
+          <div class="card product-card">
+            <div class="product-thumb">
+              <span class="badge badge-cyan product-tag">${p.badges[0] || p.categoryName}</span>
+              <img src="${p.image}" alt="${p.name}" />
+              <button class="product-quickview-btn" onclick="CellStart.openQuickView('${p.id}')">Quick View 👁️</button>
+            </div>
+            <div class="product-rating">★★★★★ <span class="count">(${p.reviewsCount} reviews)</span></div>
+            <h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
+            <p class="product-tagline">${p.tagline}</p>
+            <div class="product-footer">
+              <div class="price-wrap">
+                <span class="current-price">₹${p.price.toLocaleString()}</span>
+                <span class="original-price">₹${p.originalPrice.toLocaleString()}</span>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="CellStart.addToCart(${JSON.stringify(p).replace(/"/g, '&quot;')})">Add to Bag ⚡</button>
+            </div>
+          </div>
+        `).join('');
+      } catch (e) {
+        grid.innerHTML = '<div style="color:var(--brand-danger);text-align:center;padding:2rem">Failed to load catalog.</div>';
+      }
+    }
+
+    function filterCatalog(category) {
+      currentCategory = category;
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.category === category);
+      });
+      loadCatalog();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const cat = urlParams.get('category');
+      if (cat) {
+        filterCatalog(cat);
+      } else {
+        loadCatalog();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology & Hardware Engineering — CellStart</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar-promo">
+    <span>🔬 Engineered with GaN III semiconductors & E-Marker Smart Handshakes</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.svg" alt="CellStart Logo" class="logo-icon" />
+        <span class="brand-text">Cell<span>Start</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="features.html" class="active">Technology</a>
+        <a href="shop.html">Shop</a>
+        <a href="testimonials.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" onclick="CellStart.openSearchModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+        </button>
+
+        <button class="icon-btn" id="theme-toggle-btn">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+
+        <button class="icon-btn" onclick="CellStart.openCart()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Features -->
+  <section class="section" style="padding-top:3.5rem">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan" style="margin-bottom:0.5rem">⚡ Semiconductor Architecture</div>
+        <h1 style="font-family:var(--font-heading);font-size:2.8rem;font-weight:900;margin-bottom:0.75rem">How CellStart Outperforms Silicon</h1>
+        <p>By replacing legacy silicon with Gallium Nitride (GaN III) crystals, we achieve 95% energy efficiency in 45% smaller form factors.</p>
+      </div>
+
+      <!-- Comparison Matrix -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2rem;margin-bottom:4rem">
+        <div class="card" style="border-color:var(--brand-cyan);background:linear-gradient(145deg, rgba(14, 165, 233, 0.08), rgba(15, 23, 42, 0.8))">
+          <div class="badge badge-cyan" style="margin-bottom:1rem">⚡ CellStart GaN III Tech</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1rem">Next-Gen Fast-Charging</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;font-size:0.95rem;color:var(--text-secondary)">
+            <li style="display:flex;gap:0.5rem"><span style="color:var(--brand-cyan)">✓</span> 95% electrical conversion efficiency with near-zero heat loss</li>
+            <li style="display:flex;gap:0.5rem"><span style="color:var(--brand-cyan)">✓</span> ActiveShield 2.0 dynamic temp checks (35 times/second)</li>
+            <li style="display:flex;gap:0.5rem"><span style="color:var(--brand-cyan)">✓</span> Smart multi-device PPS wattage distribution</li>
+            <li style="display:flex;gap:0.5rem"><span style="color:var(--brand-cyan)">✓</span> 45% smaller chassis than standard OEM laptop chargers</li>
+          </ul>
+        </div>
+
+        <div class="card" style="opacity:0.75">
+          <div class="badge badge-amber" style="margin-bottom:1rem">⏳ Traditional Silicon Bricks</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1rem">Legacy In-Box Chargers</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;font-size:0.95rem;color:var(--text-muted)">
+            <li style="display:flex;gap:0.5rem"><span>✕</span> Sub-80% efficiency leading to excessive heat & wasted energy</li>
+            <li style="display:flex;gap:0.5rem"><span>✕</span> Severe thermal throttling that cuts charging speed in half</li>
+            <li style="display:flex;gap:0.5rem"><span>✕</span> Single port only — multiple heavy bricks required for travel</li>
+            <li style="display:flex;gap:0.5rem"><span>✕</span> Bulky, heavy plastic blocks prone to falling out of loose sockets</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Laboratory Durability Standards -->
+      <div class="card" style="padding:3rem 2rem;background:var(--bg-secondary)">
+        <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:3rem;align-items:center">
+          <div>
+            <div class="badge badge-emerald" style="margin-bottom:0.75rem">🧪 Extreme Stress Testing</div>
+            <h2 style="font-family:var(--font-heading);font-size:2rem;margin-bottom:1rem">30,000+ Bend Cycle Standard</h2>
+            <p style="color:var(--text-secondary);line-height:1.7;margin-bottom:1.5rem">
+              Every cable model undergoes simulated mechanical fatigue in our testing facilities: 30,000 extreme 90-degree bend cycles under a 500g static load, 100N pull-force tests, and 10,000 plug-unplug mating cycles.
+            </p>
+            <div style="display:flex;gap:1.5rem">
+              <div>
+                <h4 style="color:var(--brand-cyan);font-size:1.8rem;font-weight:900">30,000+</h4>
+                <p style="font-size:0.85rem;color:var(--text-muted)">Severe 90° Bends</p>
+              </div>
+              <div>
+                <h4 style="color:var(--brand-emerald);font-size:1.8rem;font-weight:900">100N</h4>
+                <p style="font-size:0.85rem;color:var(--text-muted)">Tensile Pull Strength</p>
+              </div>
+              <div>
+                <h4 style="color:var(--brand-purple);font-size:1.8rem;font-weight:900">240W</h4>
+                <p style="font-size:0.85rem;color:var(--text-muted)">Max EPR Power Delivery</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#090d16;padding:2rem;border-radius:var(--radius-md);border:1px solid var(--border-glass);text-align:center">
+            <img src="assets/cable-100w.svg" alt="Cable Testing" style="max-height:220px;margin:0 auto" />
+            <div style="margin-top:1rem;color:var(--brand-cyan);font-family:var(--font-mono);font-size:0.85rem">E-MARKER INTEGRITY: 100% PASS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-link" style="margin-bottom:1rem">
+            <img src="assets/logo.svg" alt="CellStart" class="logo-icon" />
+            <span class="brand-text">Cell<span>Start</span></span>
+          </div>
+          <p style="color:var(--text-secondary);font-size:0.9rem">Leading GaN charging technology engineered for creators.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Catalog</a></li>
+            <li><a href="features.html">Technology</a></li>
+            <li><a href="shop.html">Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Engineering</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 CellStart Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <h3>Your Shopping Bag</h3>
+      </div>
+      <button class="icon-btn" onclick="CellStart.closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <button id="checkout-btn" class="btn btn-primary btn-block" onclick="CellStart.openCheckoutModal()">Proceed to Checkout 🔒</button>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content" style="max-width:560px">
+      <button class="modal-close" onclick="CellStart.closeSearchModal()">✕</button>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" class="form-control" placeholder="Search..." oninput="CellStart.handleSearchInput(this.value)" />
+      </div>
+      <div id="search-modal-results" style="max-height:360px;overflow-y:auto"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

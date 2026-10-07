@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="glowCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="accentOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="neon1">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad1)" rx="16"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.1" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="100" x2="600" y2="100" />
+    <line x1="0" y1="200" x2="600" y2="200" />
+    <line x1="0" y1="300" x2="600" y2="300" />
+    <line x1="150" y1="0" x2="150" y2="400" />
+    <line x1="300" y1="0" x2="300" y2="400" />
+    <line x1="450" y1="0" x2="450" y2="400" />
+  </g>
+
+  <!-- Ambient Glow Behind Charger -->
+  <circle cx="300" cy="200" r="120" fill="#0284c7" opacity="0.15" filter="url(#neon1)"/>
+
+  <!-- Charger Main Body 3D Perspective -->
+  <!-- Shadow -->
+  <ellipse cx="300" cy="330" rx="140" ry="25" fill="#020617" opacity="0.6"/>
+
+  <!-- Charger Chassis -->
+  <rect x="200" y="100" width="200" height="200" rx="28" fill="url(#bodyGrad)" stroke="#475569" stroke-width="2.5"/>
+  <rect x="210" y="110" width="180" height="180" rx="20" fill="#0b1120" opacity="0.8"/>
+
+  <!-- Front Plate Edge Accent -->
+  <rect x="235" y="130" width="130" height="140" rx="14" fill="#1e293b" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5"/>
+
+  <!-- Port 1: USB-C PD 65W (Orange Indicator) -->
+  <rect x="260" y="148" width="80" height="22" rx="10" fill="#020617" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="272" y="157" width="56" height="4" rx="2" fill="#38bdf8" filter="url(#neon1)"/>
+  <text x="350" y="164" fill="#38bdf8" font-family="system-ui" font-size="10" font-weight="bold">PD 65W</text>
+
+  <!-- Port 2: USB-C PD 30W -->
+  <rect x="260" y="186" width="80" height="22" rx="10" fill="#020617" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="272" y="195" width="56" height="4" rx="2" fill="#64748b"/>
+  <text x="350" y="202" fill="#94a3b8" font-family="system-ui" font-size="10">PD 30W</text>
+
+  <!-- Port 3: USB-A QC 18W -->
+  <rect x="260" y="224" width="80" height="26" rx="6" fill="#020617" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="270" y="234" width="60" height="7" rx="2" fill="#f59e0b"/>
+  <text x="350" y="242" fill="#f59e0b" font-family="system-ui" font-size="10">QC 4.0</text>
+
+  <!-- GaN Branding & LED Indicator -->
+  <circle cx="300" cy="118" r="3.5" fill="#38bdf8" filter="url(#neon1)"/>
+  <text x="300" y="286" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="11" font-weight="700" letter-spacing="2">GaN III • 65W MAX</text>
+
+  <!-- Badge in corner -->
+  <rect x="440" y="30" width="130" height="32" rx="16" fill="rgba(14, 165, 233, 0.15)" stroke="#38bdf8" stroke-width="1"/>
+  <text x="505" y="51" text-anchor="middle" fill="#38bdf8" font-family="system-ui" font-size="12" font-weight="bold">⚡ 65W FAST PD</text>
+</svg>

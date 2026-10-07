@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgBuds" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="cyanGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgBuds)" rx="16"/>
+
+  <ellipse cx="300" cy="340" rx="130" ry="22" fill="#020617" opacity="0.6"/>
+
+  <!-- Charging Case Open -->
+  <rect x="210" y="140" width="180" height="150" rx="40" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="225" y="155" width="150" height="120" rx="30" fill="#0b1120"/>
+
+  <!-- Left Earbud -->
+  <g transform="translate(255, 170)">
+    <circle cx="0" cy="0" r="18" fill="#334155" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="-6" y="10" width="12" height="36" rx="6" fill="#334155"/>
+    <circle cx="0" cy="0" r="4" fill="#38bdf8" filter="url(#cyanGlow)"/>
+  </g>
+
+  <!-- Right Earbud -->
+  <g transform="translate(345, 170)">
+    <circle cx="0" cy="0" r="18" fill="#334155" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="-6" y="10" width="12" height="36" rx="6" fill="#334155"/>
+    <circle cx="0" cy="0" r="4" fill="#38bdf8" filter="url(#cyanGlow)"/>
+  </g>
+
+  <text x="300" y="270" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="11" font-weight="bold">⚡ 48dB ANC • 40H BATTERY</text>
+
+  <rect x="420" y="30" width="150" height="32" rx="16" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1"/>
+  <text x="495" y="51" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="12" font-weight="bold">🎧 HYBRID ANC PRO</text>
+</svg>

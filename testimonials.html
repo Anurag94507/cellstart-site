@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Reviews & Feedback — CellStart</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar-promo">
+    <span>⭐ Over 15,000+ happy creators & tech enthusiasts powered by CellStart</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.svg" alt="CellStart Logo" class="logo-icon" />
+        <span class="brand-text">Cell<span>Start</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="features.html">Technology</a>
+        <a href="shop.html">Shop</a>
+        <a href="testimonials.html" class="active">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" onclick="CellStart.openSearchModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+        </button>
+
+        <button class="icon-btn" id="theme-toggle-btn">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+
+        <button class="icon-btn" onclick="CellStart.openCart()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Reviews Header & Overall Stats -->
+  <section class="section" style="padding-top:3rem">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:2rem;align-items:center;margin-bottom:3rem">
+        <div>
+          <div class="badge badge-emerald" style="margin-bottom:0.5rem">⭐ Verified Buyer Feedback</div>
+          <h1 style="font-family:var(--font-heading);font-size:2.5rem;font-weight:800;margin-bottom:0.5rem">Customer Experiences</h1>
+          <p style="color:var(--text-secondary);font-size:1.1rem">Real stories from remote workers, developers, gamers, and world travelers using CellStart gear daily.</p>
+        </div>
+
+        <div class="card" style="background:var(--bg-card);text-align:center;padding:1.5rem">
+          <div style="font-family:var(--font-heading);font-size:3rem;font-weight:900;color:var(--brand-amber)">4.9 / 5.0</div>
+          <div style="color:var(--brand-amber);font-size:1.25rem;margin-bottom:0.35rem">★★★★★</div>
+          <div style="font-size:0.85rem;color:var(--text-muted)">Based on 800+ verified customer reviews</div>
+        </div>
+      </div>
+
+      <!-- Live Reviews Grid -->
+      <div class="reviews-grid" id="reviews-container">
+        <div style="text-align:center;padding:3rem;grid-column:1/-1;color:var(--text-muted)">Loading real-time customer reviews...</div>
+      </div>
+
+      <!-- Write a Review Form -->
+      <div class="review-form-card">
+        <div style="max-width:640px">
+          <div class="badge badge-cyan" style="margin-bottom:0.5rem">✍️ Leave Your Feedback</div>
+          <h2 style="font-family:var(--font-heading);font-size:1.8rem;margin-bottom:0.5rem">Write a Verified Review</h2>
+          <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.5rem">Share your charging experience with the community. Reviews update in real time via our backend API.</p>
+
+          <form id="submit-review-form" onsubmit="submitCustomerReview(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name *</label>
+                <input name="author" class="form-control" placeholder="e.g. Rahul Sharma" required />
+              </div>
+              <div class="form-group">
+                <label>Your City / Location</label>
+                <input name="location" class="form-control" placeholder="e.g. Mumbai, India" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Product Purchased *</label>
+                <select name="product" class="form-control" required>
+                  <option value="VoltMax 65W Dual GaN Fast Charger">VoltMax 65W Dual GaN Fast Charger</option>
+                  <option value="PowerWeave 100W Ballistic Braided USB-C Cable">PowerWeave 100W Ballistic Braided Cable</option>
+                  <option value="MagFlow 15W Qi2 Magnetic Fast Wireless Stand">MagFlow 15W Qi2 Magnetic Stand</option>
+                  <option value="VoltCore 20,000mAh 65W Power Delivery Bank">VoltCore 20,000mAh 65W Power Bank</option>
+                  <option value="OmniPack 65W GaN Universal Travel Adapter">OmniPack 65W GaN Travel Adapter</option>
+                  <option value="FlexGuard 240W Liquid Silicone Cable">FlexGuard 240W Liquid Silicone Cable</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Rating *</label>
+                <div class="star-rating-select" id="star-rating-picker">
+                  <span onclick="setRating(1)">★</span>
+                  <span onclick="setRating(2)">★</span>
+                  <span onclick="setRating(3)">★</span>
+                  <span onclick="setRating(4)">★</span>
+                  <span onclick="setRating(5)">★</span>
+                </div>
+                <input type="hidden" name="rating" id="selected-rating" value="5" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Review Headline</label>
+              <input name="title" class="form-control" placeholder="e.g. Best charger I've ever owned!" />
+            </div>
+
+            <div class="form-group">
+              <label>Detailed Review *</label>
+              <textarea name="comment" class="form-control" rows="4" placeholder="Tell us how fast it charges, how durable the material feels, etc." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="review-submit-btn">Publish Review 🚀</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-link" style="margin-bottom:1rem">
+            <img src="assets/logo.svg" alt="CellStart" class="logo-icon" />
+            <span class="brand-text">Cell<span>Start</span></span>
+          </div>
+          <p style="color:var(--text-secondary);font-size:0.9rem">Backed by our 1-year replacement warranty.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">GaN Wall Chargers</a></li>
+            <li><a href="products.html">100W/240W Cables</a></li>
+            <li><a href="shop.html">Shop Bundles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul class="footer-links">
+            <li><a href="testimonials.html">Reviews</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 CellStart Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <h3>Your Shopping Bag</h3>
+      </div>
+      <button class="icon-btn" onclick="CellStart.closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <div class="cart-summary-line"><span>Subtotal</span><span id="cart-subtotal">₹0</span></div>
+      <div class="cart-summary-line" style="color:var(--brand-emerald)"><span>Coupon Discount</span><span id="cart-discount">-₹0</span></div>
+      <div class="cart-summary-line"><span>Express Delivery</span><span id="cart-shipping">₹99</span></div>
+      <div class="cart-total-line"><span>Estimated Total</span><span id="cart-total" style="color:var(--brand-cyan)">₹0</span></div>
+      <button id="checkout-btn" class="btn btn-primary btn-block" onclick="CellStart.openCheckoutModal()">Proceed to Checkout 🔒</button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-content" style="max-width:620px">
+      <button class="modal-close" onclick="CellStart.closeCheckoutModal()">✕</button>
+      <div id="checkout-modal-body">
+        <h2 style="font-family:var(--font-heading);font-size:1.6rem;margin-bottom:0.5rem">Fast Checkout</h2>
+        <div id="checkout-items-summary"></div>
+        <form onsubmit="CellStart.submitOrder(event)">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input name="customerName" class="form-control" required /></div>
+            <div class="form-group"><label>Email *</label><input name="customerEmail" type="email" class="form-control" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone *</label><input name="customerPhone" class="form-control" required /></div>
+            <div class="form-group"><label>Payment</label>
+              <select name="paymentMethod" class="form-control">
+                <option value="upi">UPI / Instant QR</option>
+                <option value="card">Credit / Debit Card</option>
+                <option value="cod">Cash on Delivery</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Shipping Address *</label><textarea name="customerAddress" class="form-control" rows="2" required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:1rem">Place Order 🔒</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content" style="max-width:560px">
+      <button class="modal-close" onclick="CellStart.closeSearchModal()">✕</button>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" class="form-control" placeholder="Search..." oninput="CellStart.handleSearchInput(this.value)" />
+      </div>
+      <div id="search-modal-results" style="max-height:360px;overflow-y:auto"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    let currentRating = 5;
+
+    function setRating(val) {
+      currentRating = val;
+      document.getElementById('selected-rating').value = val;
+      const stars = document.querySelectorAll('#star-rating-picker span');
+      stars.forEach((s, idx) => {
+        s.style.opacity = idx < val ? '1' : '0.25';
+      });
+    }
+
+    async function loadReviews() {
+      const container = document.getElementById('reviews-container');
+      try {
+        const res = await fetch('/api/reviews');
+        const data = await res.json();
+        
+        container.innerHTML = data.reviews.map(r => `
+          <div class="card review-card">
+            <div class="review-header">
+              <div class="avatar">${r.author.charAt(0)}</div>
+              <div class="review-author">
+                <h4>${r.author} <span class="badge badge-emerald" style="font-size:0.65rem">✓ Verified Buyer</span></h4>
+                <p>${r.location} • ${r.date}</p>
+              </div>
+            </div>
+            <div style="color:var(--brand-amber);font-size:1.1rem">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+            <div style="font-weight:700;font-size:1.05rem;color:var(--text-primary)">"${r.title}"</div>
+            <p class="review-comment">${r.comment}</p>
+            <div style="font-size:0.75rem;color:var(--brand-cyan);font-weight:600;margin-top:auto">Product: ${r.product}</div>
+          </div>
+        `).join('');
+      } catch (e) {
+        container.innerHTML = '<div style="color:var(--brand-danger);text-align:center">Unable to load reviews.</div>';
+      }
+    }
+
+    async function submitCustomerReview(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('review-submit-btn');
+      btn.innerHTML = 'Publishing...';
+      btn.disabled = true;
+
+      const payload = {
+        author: form.author.value,
+        location: form.location.value,
+        product: form.product.value,
+        rating: currentRating,
+        title: form.title.value || 'Great product!',
+        comment: form.comment.value
+      };
+
+      try {
+        const res = await fetch('/api/reviews', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          CellStart.showToast('Your verified review has been published!', 'success');
+          form.reset();
+          setRating(5);
+          loadReviews();
+        } else {
+          CellStart.showToast(data.message || 'Failed to submit review', 'error');
+        }
+      } catch (err) {
+        CellStart.showToast('Network error while posting review', 'error');
+      } finally {
+        btn.innerHTML = 'Publish Review 🚀';
+        btn.disabled = false;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setRating(5);
+      loadReviews();
+    });
+  </script>
+</body>
+</html>

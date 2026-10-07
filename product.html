@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details — CellStart Pro</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar-promo">
+    <span>⚡ FLASH OFFER: Use code <strong>CELLSTART20</strong> for 20% off!</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.svg" alt="CellStart Logo" class="logo-icon" />
+        <span class="brand-text">Cell<span>Start</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="features.html">Technology</a>
+        <a href="shop.html">Shop</a>
+        <a href="testimonials.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" onclick="CellStart.openSearchModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+
+        <button class="icon-btn" id="theme-toggle-btn">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+
+        <button class="icon-btn" onclick="CellStart.openCart()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Detail Showcase Section -->
+  <section class="section" id="product-detail-section">
+    <div class="container" id="product-detail-container">
+      <div style="text-align:center;padding:4rem;color:var(--text-muted)">Loading product details...</div>
+    </div>
+  </section>
+
+  <!-- Related Products Section -->
+  <section class="section" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle)">
+    <div class="container">
+      <div class="section-header" style="text-align:left;margin-bottom:2rem">
+        <div class="badge badge-cyan" style="margin-bottom:0.5rem">⚡ Frequently Paired With</div>
+        <h2>Complete Your Fast-Charge Setup</h2>
+      </div>
+      <div class="products-grid" id="related-products-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-link" style="margin-bottom:1rem">
+            <img src="assets/logo.svg" alt="CellStart" class="logo-icon" />
+            <span class="brand-text">Cell<span>Start</span></span>
+          </div>
+          <p style="color:var(--text-secondary);font-size:0.9rem">Backed by 1-year replacement warranty and 24/7 priority customer care.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="features.html">Technology</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 CellStart Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <h3>Your Shopping Bag</h3>
+      </div>
+      <button class="icon-btn" onclick="CellStart.closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <div style="display:flex;gap:0.5rem;margin-bottom:1rem">
+        <input type="text" id="coupon-input" class="form-control" placeholder="Promo code (e.g. CELLSTART20)" style="text-transform:uppercase" />
+        <button class="btn btn-secondary btn-sm" onclick="CellStart.applyCouponCode()">Apply</button>
+      </div>
+      <div class="cart-summary-line"><span>Subtotal</span><span id="cart-subtotal">₹0</span></div>
+      <div class="cart-summary-line" style="color:var(--brand-emerald)"><span>Coupon Discount</span><span id="cart-discount">-₹0</span></div>
+      <div class="cart-summary-line"><span>Express Delivery</span><span id="cart-shipping">₹99</span></div>
+      <div class="cart-total-line"><span>Estimated Total</span><span id="cart-total" style="color:var(--brand-cyan)">₹0</span></div>
+      <button id="checkout-btn" class="btn btn-primary btn-block" onclick="CellStart.openCheckoutModal()">Proceed to Checkout 🔒</button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-content" style="max-width:620px">
+      <button class="modal-close" onclick="CellStart.closeCheckoutModal()">✕</button>
+      <div id="checkout-modal-body">
+        <h2 style="font-family:var(--font-heading);font-size:1.6rem;margin-bottom:0.5rem">Fast Checkout</h2>
+        <div id="checkout-items-summary"></div>
+        <form onsubmit="CellStart.submitOrder(event)">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input name="customerName" class="form-control" required /></div>
+            <div class="form-group"><label>Email *</label><input name="customerEmail" type="email" class="form-control" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone *</label><input name="customerPhone" class="form-control" required /></div>
+            <div class="form-group"><label>Payment</label>
+              <select name="paymentMethod" class="form-control">
+                <option value="upi">UPI / Instant QR</option>
+                <option value="card">Credit / Debit Card</option>
+                <option value="cod">Cash on Delivery</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Shipping Address *</label><textarea name="customerAddress" class="form-control" rows="2" required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:1rem">Place Order 🔒</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content" style="max-width:560px">
+      <button class="modal-close" onclick="CellStart.closeSearchModal()">✕</button>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" class="form-control" placeholder="Search GaN chargers, cables..." oninput="CellStart.handleSearchInput(this.value)" />
+      </div>
+      <div id="search-modal-results" style="max-height:360px;overflow-y:auto"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    let currentProduct = null;
+
+    async function loadProductDetail() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id') || 'voltmax-65w';
+      const container = document.getElementById('product-detail-container');
+
+      try {
+        const res = await fetch(`/api/products/${productId}`);
+        const data = await res.json();
+        if (!data.success) {
+          container.innerHTML = '<div style="color:var(--brand-danger);text-align:center;padding:4rem">Product not found. <a href="products.html">Return to catalog</a></div>';
+          return;
+        }
+
+        currentProduct = data.product;
+        const p = data.product;
+        document.title = `${p.name} — CellStart Pro`;
+
+        container.innerHTML = `
+          <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:3.5rem;align-items:start">
+            <!-- Left: Gallery & Visuals -->
+            <div>
+              <div style="background:#090d16;border:1px solid var(--border-glass);border-radius:var(--radius-lg);padding:2.5rem;text-align:center;margin-bottom:1.5rem">
+                <img src="${p.image}" alt="${p.name}" style="max-height:340px;margin:0 auto;filter:drop-shadow(0 15px 30px rgba(0,0,0,0.5))" />
+              </div>
+              <div style="display:flex;gap:1rem">
+                <div style="flex:1;background:var(--bg-card);border:1px solid var(--border-subtle);padding:1rem;border-radius:var(--radius-md);text-align:center">
+                  <div style="color:var(--brand-cyan);font-size:1.4rem;font-weight:800">⚡ GaN III</div>
+                  <div style="font-size:0.8rem;color:var(--text-muted)">Silicon Replacement</div>
+                </div>
+                <div style="flex:1;background:var(--bg-card);border:1px solid var(--border-subtle);padding:1rem;border-radius:var(--radius-md);text-align:center">
+                  <div style="color:var(--brand-emerald);font-size:1.4rem;font-weight:800">🛡️ 1-Year</div>
+                  <div style="font-size:0.8rem;color:var(--text-muted)">Direct Replacement</div>
+                </div>
+                <div style="flex:1;background:var(--bg-card);border:1px solid var(--border-subtle);padding:1rem;border-radius:var(--radius-md);text-align:center">
+                  <div style="color:var(--brand-amber);font-size:1.4rem;font-weight:800">✈️ DGCA Safe</div>
+                  <div style="font-size:0.8rem;color:var(--text-muted)">Flight Approved</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Details & Buying Flow -->
+            <div>
+              <div class="badge badge-cyan" style="margin-bottom:0.75rem">${p.categoryName}</div>
+              <h1 style="font-family:var(--font-heading);font-size:2.4rem;font-weight:900;line-height:1.2;margin-bottom:0.75rem">${p.name}</h1>
+              <p style="color:var(--text-secondary);font-size:1.1rem;margin-bottom:1.25rem">${p.tagline}</p>
+              
+              <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem">
+                <div class="price-wrap">
+                  <span class="current-price" style="font-size:2.2rem">₹${p.price.toLocaleString()}</span>
+                  <span class="original-price" style="font-size:1.2rem">₹${p.originalPrice.toLocaleString()}</span>
+                </div>
+                <span class="badge badge-emerald">In Stock (${p.stockCount} Units Ready)</span>
+              </div>
+
+              <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:2rem">${p.description}</p>
+
+              <!-- Highlights list -->
+              <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.5rem;margin-bottom:2rem">
+                <h4 style="font-family:var(--font-heading);margin-bottom:0.75rem">Key Highlights:</h4>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem">
+                  ${p.features.map(f => `<li style="display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;color:var(--text-primary)"><span style="color:var(--brand-cyan);font-weight:800">✓</span> ${f}</li>`).join('')}
+                </ul>
+              </div>
+
+              <!-- Action button -->
+              <div style="display:flex;gap:1rem">
+                <button class="btn btn-primary" style="flex:1;padding:1rem" onclick="CellStart.addToCart(currentProduct)">Add to Shopping Bag ⚡</button>
+                <button class="btn btn-accent" style="padding:1rem 2rem" onclick="CellStart.addToCart(currentProduct); CellStart.openCheckoutModal()">Buy Now 🚀</button>
+              </div>
+
+              <!-- Technical Specifications Table -->
+              <div style="margin-top:3rem">
+                <h3 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1rem">Technical Specifications</h3>
+                <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-md);overflow:hidden">
+                  ${Object.entries(p.specs).map(([k, v], idx) => `
+                    <div style="display:grid;grid-template-columns:180px 1fr;padding:0.85rem 1.25rem;border-bottom:${idx < Object.keys(p.specs).length - 1 ? '1px solid var(--border-subtle)' : 'none'};background:${idx % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.02)'}">
+                      <div style="color:var(--text-muted);font-weight:600;font-size:0.85rem">${k}</div>
+                      <div style="color:var(--text-primary);font-size:0.9rem;font-weight:500">${v}</div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Render related
+        const relatedGrid = document.getElementById('related-products-grid');
+        if (relatedGrid && data.related) {
+          relatedGrid.innerHTML = data.related.map(r => `
+            <div class="card product-card">
+              <div class="product-thumb">
+                <img src="${r.image}" alt="${r.name}" />
+              </div>
+              <h4 class="product-title"><a href="product.html?id=${r.id}">${r.name}</a></h4>
+              <div class="product-footer">
+                <span class="current-price">₹${r.price.toLocaleString()}</span>
+                <a href="product.html?id=${r.id}" class="btn btn-secondary btn-sm">View Item</a>
+              </div>
+            </div>
+          `).join('');
+        }
+
+      } catch (err) {
+        container.innerHTML = '<div style="color:var(--brand-danger)">Failed to load product information.</div>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadProductDetail);
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Blog & Charging Guides — CellStart</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.svg" alt="CellStart Logo" class="logo-icon" />
+        <span class="brand-text">Cell<span>Start</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="features.html">Technology</a>
+        <a href="shop.html">Shop</a>
+        <a href="testimonials.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle-btn">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+        <button class="icon-btn" onclick="CellStart.openCart()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog Section -->
+  <section class="section" style="padding-top:3.5rem">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan" style="margin-bottom:0.5rem">📚 Power Insights</div>
+        <h1 style="font-family:var(--font-heading);font-size:2.8rem;font-weight:900;margin-bottom:0.75rem">The CellStart Tech Journal</h1>
+        <p>Deep dives into GaN physics, USB-PD 3.1 240W protocols, and keeping battery cycle health above 90%.</p>
+      </div>
+
+      <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2rem">
+        <article class="card">
+          <div class="badge badge-cyan" style="margin-bottom:0.75rem">Battery Health</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.35rem;margin-bottom:0.5rem">Does 65W GaN Fast Charging Hurt Lithium Batteries?</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;margin-bottom:1rem">A scientific breakdown of heat management, PPS voltage stepped regulation, and why temperature matters more than pure wattage.</p>
+          <div style="font-size:0.8rem;color:var(--text-muted)">5 min read • By Hardware Engineering Team</div>
+        </article>
+
+        <article class="card">
+          <div class="badge badge-emerald" style="margin-bottom:0.75rem">USB-IF Standards</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.35rem;margin-bottom:0.5rem">What is USB-PD 3.1 Extended Power Range (240W)?</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;margin-bottom:1rem">How the new 48V/5A standard is replacing bulky gaming laptop power bricks and powering high-draw workstation gear with a single Type-C cord.</p>
+          <div style="font-size:0.8rem;color:var(--text-muted)">4 min read • By Lab Standards Lead</div>
+        </article>
+
+        <article class="card">
+          <div class="badge badge-amber" style="margin-bottom:0.75rem">Travel Guide</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.35rem;margin-bottom:0.5rem">One Plug For 150 Countries: International Power Explained</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.6;margin-bottom:1rem">Understanding voltage fluctuations (110V vs 240V), auto-resetting thermal fuses, and packing minimal gear for international flights.</p>
+          <div style="font-size:0.8rem;color:var(--text-muted)">6 min read • By Global Ops</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 CellStart Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Shopping Bag</h3>
+      <button class="icon-btn" onclick="CellStart.closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <button id="checkout-btn" class="btn btn-primary btn-block" onclick="CellStart.openCheckoutModal()">Proceed to Checkout 🔒</button>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

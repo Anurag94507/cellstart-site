@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop & Bundles — CellStart Pro</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar-promo">
+    <span>⚡ BUNDLE SPECIAL: Fast Charger + 100W Cable Combo saves 25%!</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.svg" alt="CellStart Logo" class="logo-icon" />
+        <span class="brand-text">Cell<span>Start</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="features.html">Technology</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="testimonials.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" onclick="CellStart.openSearchModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+        </button>
+
+        <button class="icon-btn" id="theme-toggle-btn">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+
+        <button class="icon-btn" onclick="CellStart.openCart()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Shop Main Section -->
+  <section class="section" style="padding-top:3rem">
+    <div class="container">
+      <div class="section-header" style="text-align:left;max-width:100%;margin-bottom:2.5rem">
+        <div class="badge badge-amber" style="margin-bottom:0.5rem">🛒 Direct Order Portal</div>
+        <h1 style="font-family:var(--font-heading);font-size:2.5rem;font-weight:800;margin-bottom:0.35rem">Quick Shop & Bundle Packs</h1>
+        <p style="color:var(--text-secondary)">Add items directly to your cart and checkout with automated express fulfillment.</p>
+      </div>
+
+      <!-- Featured Starter Bundle Card -->
+      <div class="card" style="background:linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(30, 41, 59, 0.9));border-color:var(--brand-cyan);padding:2rem;margin-bottom:3rem">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center">
+          <div>
+            <div class="badge badge-cyan" style="margin-bottom:0.75rem">⚡ Pro Creator Power Kit</div>
+            <h2 style="font-family:var(--font-heading);font-size:1.8rem;margin-bottom:0.5rem">VoltMax 65W GaN + PowerWeave 100W Cable</h2>
+            <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:1.5rem">The ultimate all-in-one charging setup for your laptop and phone. Includes 65W GaN dual-port adapter plus our 2-meter ballistic Kevlar cable.</p>
+            
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+              <span class="current-price" style="font-size:2rem">₹2,499</span>
+              <span class="original-price" style="font-size:1.2rem">₹3,998</span>
+              <span class="badge badge-emerald">Save ₹1,499 (38% OFF)</span>
+            </div>
+
+            <button class="btn btn-primary" onclick="addBundleToCart()">Add Starter Bundle ⚡</button>
+          </div>
+
+          <div style="display:flex;gap:1rem;justify-content:center">
+            <img src="assets/charger-65w.svg" style="max-height:160px;background:#090d16;padding:1rem;border-radius:var(--radius-md)" />
+            <img src="assets/cable-100w.svg" style="max-height:160px;background:#090d16;padding:1rem;border-radius:var(--radius-md)" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Catalog Grid -->
+      <h3 style="font-family:var(--font-heading);font-size:1.5rem;margin-bottom:1.5rem">Individual Hardware Items</h3>
+      <div class="products-grid" id="shop-catalog-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-link" style="margin-bottom:1rem">
+            <img src="assets/logo.svg" alt="CellStart" class="logo-icon" />
+            <span class="brand-text">Cell<span>Start</span></span>
+          </div>
+          <p style="color:var(--text-secondary);font-size:0.9rem">Engineered for pure speed and lasting durability.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Catalog</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Payment Methods</h4>
+          <p style="color:var(--text-secondary);font-size:0.85rem">UPI (Google Pay, PhonePe, Paytm), Visa, Mastercard, NetBanking & Cash on Delivery.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 CellStart Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <h3>Your Shopping Bag</h3>
+      </div>
+      <button class="icon-btn" onclick="CellStart.closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <div style="display:flex;gap:0.5rem;margin-bottom:1rem">
+        <input type="text" id="coupon-input" class="form-control" placeholder="Promo code (e.g. CELLSTART20)" style="text-transform:uppercase" />
+        <button class="btn btn-secondary btn-sm" onclick="CellStart.applyCouponCode()">Apply</button>
+      </div>
+      <div class="cart-summary-line"><span>Subtotal</span><span id="cart-subtotal">₹0</span></div>
+      <div class="cart-summary-line" style="color:var(--brand-emerald)"><span>Coupon Discount</span><span id="cart-discount">-₹0</span></div>
+      <div class="cart-summary-line"><span>Express Delivery</span><span id="cart-shipping">₹99</span></div>
+      <div class="cart-total-line"><span>Estimated Total</span><span id="cart-total" style="color:var(--brand-cyan)">₹0</span></div>
+      <button id="checkout-btn" class="btn btn-primary btn-block" onclick="CellStart.openCheckoutModal()">Proceed to Checkout 🔒</button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-content" style="max-width:620px">
+      <button class="modal-close" onclick="CellStart.closeCheckoutModal()">✕</button>
+      <div id="checkout-modal-body">
+        <h2 style="font-family:var(--font-heading);font-size:1.6rem;margin-bottom:0.5rem">Fast Checkout</h2>
+        <div id="checkout-items-summary"></div>
+        <form onsubmit="CellStart.submitOrder(event)">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input name="customerName" class="form-control" required /></div>
+            <div class="form-group"><label>Email *</label><input name="customerEmail" type="email" class="form-control" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Phone *</label><input name="customerPhone" class="form-control" required /></div>
+            <div class="form-group"><label>Payment</label>
+              <select name="paymentMethod" class="form-control">
+                <option value="upi">UPI / Instant QR</option>
+                <option value="card">Credit / Debit Card</option>
+                <option value="cod">Cash on Delivery</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Shipping Address *</label><textarea name="customerAddress" class="form-control" rows="2" required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:1rem">Place Order 🔒</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content" style="max-width:560px">
+      <button class="modal-close" onclick="CellStart.closeSearchModal()">✕</button>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" class="form-control" placeholder="Search products..." oninput="CellStart.handleSearchInput(this.value)" />
+      </div>
+      <div id="search-modal-results" style="max-height:360px;overflow-y:auto"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function addBundleToCart() {
+      CellStart.addToCart({ id: 'voltmax-65w', name: 'VoltMax 65W Dual GaN Fast Charger', price: 1800, image: 'assets/charger-65w.svg' });
+      CellStart.addToCart({ id: 'powerweave-100w', name: 'PowerWeave 100W Ballistic Braided USB-C Cable', price: 699, image: 'assets/cable-100w.svg' });
+      CellStart.showToast('Added Pro Creator Power Kit to bag!', 'success');
+    }
+
+    async function loadShopGrid() {
+      const grid = document.getElementById('shop-catalog-grid');
+      try {
+        const res = await fetch('/api/products');
+        const data = await res.json();
+        grid.innerHTML = data.products.map(p => `
+          <div class="card product-card">
+            <div class="product-thumb">
+              <span class="badge badge-cyan product-tag">${p.categoryName}</span>
+              <img src="${p.image}" alt="${p.name}" />
+            </div>
+            <div class="product-rating">★★★★★ <span class="count">(${p.reviewsCount})</span></div>
+            <h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
+            <p class="product-tagline">${p.tagline}</p>
+            <div class="product-footer">
+              <div class="price-wrap">
+                <span class="current-price">₹${p.price.toLocaleString()}</span>
+                <span class="original-price">₹${p.originalPrice.toLocaleString()}</span>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="CellStart.addToCart(${JSON.stringify(p).replace(/"/g, '&quot;')})">Add to Bag ⚡</button>
+            </div>
+          </div>
+        `).join('');
+      } catch (e) {
+        grid.innerHTML = '<div style="color:var(--brand-danger)">Failed to load products.</div>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadShopGrid);
+  </script>
+</body>
+</html>

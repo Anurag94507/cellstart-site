@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a101d"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="anodized" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="30%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="oledGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#pbBg)" rx="16"/>
+
+  <!-- Shadow -->
+  <ellipse cx="300" cy="340" rx="160" ry="26" fill="#020617" opacity="0.7"/>
+
+  <!-- Powerbank Body -->
+  <rect x="170" y="90" width="260" height="230" rx="28" fill="url(#anodized)" stroke="#475569" stroke-width="2"/>
+
+  <!-- Top Port Edge -->
+  <rect x="190" y="96" width="220" height="36" rx="10" fill="#0b1120" stroke="#334155" stroke-width="1"/>
+  <!-- USB-C Port 1 -->
+  <rect x="220" y="106" width="38" height="15" rx="7" fill="#020617" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="231" y="112" width="16" height="3" rx="1" fill="#38bdf8"/>
+  <!-- USB-C Port 2 -->
+  <rect x="280" y="106" width="38" height="15" rx="7" fill="#020617" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="291" y="112" width="16" height="3" rx="1" fill="#38bdf8"/>
+  <!-- USB-A Port -->
+  <rect x="340" y="105" width="44" height="17" rx="3" fill="#020617" stroke="#f59e0b" stroke-width="1.5"/>
+
+  <!-- Crisp OLED Screen Panel -->
+  <rect x="210" y="160" width="180" height="90" rx="14" fill="#020617" stroke="#38bdf8" stroke-width="2"/>
+
+  <!-- OLED Live Graphics -->
+  <text x="230" y="195" fill="#38bdf8" font-family="'Courier New', monospace" font-size="28" font-weight="900" filter="url(#oledGlow)">98%</text>
+  <text x="320" y="190" fill="#10b981" font-family="system-ui" font-size="13" font-weight="bold">65.0W</text>
+  <text x="320" y="206" fill="#94a3b8" font-family="system-ui" font-size="10">20.0V / 3.25A</text>
+  
+  <line x1="225" y1="220" x2="375" y2="220" stroke="#1e293b" stroke-width="1"/>
+  <text x="230" y="238" fill="#f59e0b" font-family="system-ui" font-size="11" font-weight="600">OUT: Type-C 1</text>
+  <text x="330" y="238" fill="#38bdf8" font-family="system-ui" font-size="11" font-weight="600">⚡ Fast-PD</text>
+
+  <!-- Capacity Emblem -->
+  <text x="300" y="295" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="12" font-weight="800" letter-spacing="3">20,000mAh • 74Wh</text>
+
+  <!-- Flight Safe Badge -->
+  <rect x="410" y="30" width="160" height="32" rx="16" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1"/>
+  <text x="490" y="51" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="12" font-weight="bold">✈️ AIRLINE APPROVED</text>
+</svg>

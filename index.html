@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CellStart — Next-Gen GaN Fast Charging & Rugged Cables</title>
+  <meta name="description" content="CellStart engineers aerospace-grade GaN fast chargers, 100W/240W braided cables, and Qi2 wireless stands for everyday high-performance tech." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar-promo">
+    <span>⚡ FLASH OFFER: Get 20% OFF your entire order with code:</span>
+    <span class="promo-code" onclick="navigator.clipboard.writeText('CELLSTART20'); CellStart.showToast('Copied coupon code CELLSTART20!', 'success')">CELLSTART20</span>
+    <span>• Free Express Shipping over ₹1,500</span>
+  </div>
+
+  <!-- Sticky Glass Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.svg" alt="CellStart Logo" class="logo-icon" />
+        <span class="brand-text">Cell<span>Start</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Products</a>
+        <a href="features.html">Technology</a>
+        <a href="shop.html">Shop</a>
+        <a href="testimonials.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="search-trigger-btn" onclick="CellStart.openSearchModal()" title="Search catalog">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+
+        <button class="icon-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+
+        <button class="icon-btn" onclick="CellStart.openCart()" title="View Bag">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-count-badge" style="display:none">0</span>
+        </button>
+
+        <button class="icon-btn mobile-menu-toggle" id="mobile-menu-toggle" title="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="badge badge-cyan hero-badge">⚡ Third-Generation GaN Architecture</div>
+        <h1 class="hero-title">
+          Power faster.<br />
+          <span class="gradient-text">Charge smarter.</span>
+        </h1>
+        <p class="hero-lead">
+          Engineered for laptops, flagship smartphones, and everyday creators. Built with Gallium Nitride III semiconductors and ballistic armor weave for lightning speeds and military durability.
+        </p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn btn-primary">Explore All Gear 🚀</a>
+          <button class="btn btn-secondary" onclick="CellStart.openQuickView('voltmax-65w')">Quick View 65W GaN</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <h4>70%</h4>
+            <p>Charge in 28 mins</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4>100%</h4>
+            <p>GaN III Efficiency</p>
+          </div>
+          <div class="hero-stat-item">
+            <h4>1 Year</h4>
+            <p>Full Replacement</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-showcase">
+        <div class="hero-product-showcase">
+          <div class="showcase-glow"></div>
+          <div class="badge badge-amber" style="margin-bottom:1rem">⚡ Featured Flagship</div>
+          <div class="showcase-img-wrap">
+            <img src="assets/charger-65w.svg" alt="VoltMax 65W GaN Charger" />
+          </div>
+          <h3 style="font-family:var(--font-heading);font-size:1.35rem;margin-bottom:0.35rem">VoltMax 65W Dual GaN Charger</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.25rem">Dual USB-C PD 3.0 + USB-A with ActiveShield 2.0 dynamic temperature monitoring.</p>
+          
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--border-subtle)">
+            <div class="price-wrap">
+              <span class="current-price">₹2,199</span>
+              <span class="original-price">₹2,999</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="CellStart.addToCart({ id: 'voltmax-65w', name: 'VoltMax 65W Dual GaN Fast Charger', price: 2199, image: 'assets/charger-65w.svg' })">Add to Bag ⚡</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Charging Benchmark Section -->
+  <section class="section" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan" style="margin-bottom:0.5rem">🔬 Live Speed Benchmark</div>
+        <h2>See The GaN III Difference</h2>
+        <p>Compare real-world charging velocity across leading flagship devices.</p>
+      </div>
+
+      <div class="benchmark-card">
+        <div class="benchmark-device-selector">
+          <button class="device-btn active" data-device="iphone" onclick="switchBenchmarkDevice('iphone')">📱 iPhone 16 Pro Max</button>
+          <button class="device-btn" data-device="galaxy" onclick="switchBenchmarkDevice('galaxy')">📱 Galaxy S25 Ultra</button>
+          <button class="device-btn" data-device="macbook" onclick="switchBenchmarkDevice('macbook')">💻 MacBook Air M3</button>
+        </div>
+
+        <div class="benchmark-bars">
+          <div class="bench-row">
+            <div class="bench-header">
+              <span style="color:var(--brand-cyan);display:flex;align-items:center;gap:0.4rem">⚡ <strong>CellStart VoltMax 65W GaN</strong> (Smart PD Allocation)</span>
+              <span style="color:var(--brand-emerald)">Fast Charge Active</span>
+            </div>
+            <div class="bench-track">
+              <div class="bench-fill bench-fill-fast" id="bench-fast-fill" style="width:70%">70% in 28 mins</div>
+            </div>
+          </div>
+
+          <div class="bench-row">
+            <div class="bench-header">
+              <span style="color:var(--text-muted)">Standard In-Box 5W/18W Charger</span>
+              <span style="color:var(--text-muted)">Slow Thermal Throttling</span>
+            </div>
+            <div class="bench-track">
+              <div class="bench-fill bench-fill-slow" id="bench-slow-fill" style="width:32%">32% in 28 mins</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1.75rem;padding-top:1.25rem;border-top:1px solid var(--border-subtle);font-size:0.85rem;color:var(--text-muted)">
+          <span id="bench-speed-note">Tested with iPhone 16 Pro Max (35W Peak GaN Protocol)</span>
+          <span style="color:var(--brand-cyan);font-weight:700">Up to 2.4x Faster Charging ⚡</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Catalog -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-emerald" style="margin-bottom:0.5rem">📦 Curated Collection</div>
+        <h2>Engineered For Pure Performance</h2>
+        <p>Discover our top-rated fast chargers, reinforced cables, and Qi2 wireless stands.</p>
+      </div>
+
+      <div class="products-grid" id="home-featured-grid">
+        <!-- Product 1 -->
+        <div class="card product-card">
+          <div class="product-thumb">
+            <span class="badge badge-cyan product-tag">Best Seller</span>
+            <img src="assets/charger-65w.svg" alt="VoltMax 65W" />
+            <button class="product-quickview-btn" onclick="CellStart.openQuickView('voltmax-65w')">Quick View 👁️</button>
+          </div>
+          <div class="product-rating">★★★★★ <span class="count">(142 reviews)</span></div>
+          <h3 class="product-title">VoltMax 65W Dual GaN Charger</h3>
+          <p class="product-tagline">2x USB-C + 1x USB-A ultra-compact multi-device power hub.</p>
+          <div class="product-footer">
+            <div class="price-wrap">
+              <span class="current-price">₹2,199</span>
+              <span class="original-price">₹2,999</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="CellStart.addToCart({ id: 'voltmax-65w', name: 'VoltMax 65W Dual GaN Fast Charger', price: 2199, image: 'assets/charger-65w.svg' })">Add to Bag ⚡</button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card product-card">
+          <div class="product-thumb">
+            <span class="badge badge-cyan product-tag">E-Marker Chip</span>
+            <img src="assets/cable-100w.svg" alt="PowerWeave 100W" />
+            <button class="product-quickview-btn" onclick="CellStart.openQuickView('powerweave-100w')">Quick View 👁️</button>
+          </div>
+          <div class="product-rating">★★★★★ <span class="count">(320 reviews)</span></div>
+          <h3 class="product-title">PowerWeave 100W Braided Cable</h3>
+          <p class="product-tagline">Ballistic nylon 2m cord rated for 30,000+ severe flex cycles.</p>
+          <div class="product-footer">
+            <div class="price-wrap">
+              <span class="current-price">₹699</span>
+              <span class="original-price">₹999</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="CellStart.addToCart({ id: 'powerweave-100w', name: 'PowerWeave 100W Ballistic Braided USB-C Cable', price: 699, image: 'assets/cable-100w.svg' })">Add to Bag ⚡</button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card product-card">
+          <div class="product-thumb">
+            <span class="badge badge-emerald product-tag">Qi2 Certified</span>
+            <img src="assets/magsafe-stand.svg" alt="MagFlow 15W" />
+            <button class="product-quickview-btn" onclick="CellStart.openQuickView('magflow-15w')">Quick View 👁️</button>
+          </div>
+          <div class="product-rating">★★★★★ <span class="count">(88 reviews)</span></div>
+          <h3 class="product-title">MagFlow 15W Qi2 Magnetic Stand</h3>
+          <p class="product-tagline">Aerospace aluminum 60° floating tilt with N52 rare-earth magnets.</p>
+          <div class="product-footer">
+            <div class="price-wrap">
+              <span class="current-price">₹2,499</span>
+              <span class="original-price">₹3,499</span>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="CellStart.addToCart({ id: 'magflow-15w', name: 'MagFlow 15W Qi2 Magnetic Fast Wireless Stand', price: 2499, image: 'assets/magsafe-stand.svg' })">Add to Bag ⚡</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:3rem">
+        <a href="products.html" class="btn btn-secondary">View Full 6-Product Lineup →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid Section -->
+  <section class="section" style="background:var(--bg-secondary);border-top:1px solid var(--border-subtle)">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-cyan" style="margin-bottom:0.5rem">🛡️ The CellStart Advantage</div>
+        <h2>Built To Outlast & Outperform</h2>
+        <p>Why thousands of creators, professionals, and travelers choose CellStart hardware.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.5rem">
+        <div class="card">
+          <div style="font-size:2rem;margin-bottom:1rem">⚡</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.25rem;margin-bottom:0.5rem">ActiveShield 2.0</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem">Dynamically checks temperature over 3 million times a day to prevent overheating and protect your battery health.</p>
+        </div>
+
+        <div class="card">
+          <div style="font-size:2rem;margin-bottom:1rem">🧵</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.25rem;margin-bottom:0.5rem">Ballistic Armor Weave</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem">Reinforced with DuPont Kevlar fibers and laser-welded aluminum housing tested to withstand 30,000+ bends.</p>
+        </div>
+
+        <div class="card">
+          <div style="font-size:2rem;margin-bottom:1rem">🌍</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.25rem;margin-bottom:0.5rem">Universal Compatibility</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem">Seamless full-speed power delivery for Apple, Samsung, Google Pixel, MacBook, Dell XPS, and Nintendo Switch.</p>
+        </div>
+
+        <div class="card">
+          <div style="font-size:2rem;margin-bottom:1rem">🤝</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.25rem;margin-bottom:0.5rem">1-Year Replacement</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem">Zero hassle warranty claims. If your cable or charger malfunctions within 365 days, we ship you a brand new one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section">
+    <div class="container">
+      <div class="card" style="background:linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(37, 99, 235, 0.1));border-color:var(--border-glass);padding:3.5rem 2rem;text-align:center">
+        <div class="badge badge-cyan" style="margin-bottom:1rem">🎁 Subscriber Perk</div>
+        <h2 style="font-family:var(--font-heading);font-size:2.2rem;margin-bottom:0.75rem">Join the Fast-Charge Club</h2>
+        <p style="color:var(--text-secondary);max-width:550px;margin:0 auto 2rem">Get an instant 15% discount coupon code sent to your inbox plus early access to hardware drops.</p>
+        
+        <form id="newsletter-form" style="display:flex;max-width:480px;margin:0 auto;gap:0.75rem">
+          <input type="email" class="form-control" placeholder="Enter your email address" required style="flex:1" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-link" style="margin-bottom:1rem">
+            <img src="assets/logo.svg" alt="CellStart" class="logo-icon" />
+            <span class="brand-text">Cell<span>Start</span></span>
+          </div>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.5rem">
+            High-performance GaN chargers, ballistic braided cables, and Qi2 wireless technology built for speed, durability, and peace of mind.
+          </p>
+          <div class="badge badge-emerald">⚡ Online & Fast Shipping Active</div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?category=chargers">GaN Wall Chargers</a></li>
+            <li><a href="products.html?category=cables">100W/240W Cables</a></li>
+            <li><a href="products.html?category=wireless">Qi2 Wireless Stands</a></li>
+            <li><a href="products.html?category=accessories">Travel Adapters</a></li>
+            <li><a href="shop.html">Shop All</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About CellStart</a></li>
+            <li><a href="features.html">Technology & Safety</a></li>
+            <li><a href="testimonials.html">Customer Reviews</a></li>
+            <li><a href="careers.html">Careers (Hiring!)</a></li>
+            <li><a href="blog.html">Tech Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#" onclick="CellStart.trackOrderModal('CS-98421')">Track Order</a></li>
+            <li><a href="contact.html">Warranty Claims</a></li>
+            <li><a href="contact.html">Shipping FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 CellStart Inc. All rights reserved. Powered by Node.js Fast-PD API.</div>
+        <div style="display:flex;gap:1.5rem">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Service</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <h3>Your Shopping Bag</h3>
+      </div>
+      <button class="icon-btn" onclick="CellStart.closeCart()" title="Close Bag">✕</button>
+    </div>
+
+    <!-- Free shipping meter -->
+    <div style="background:var(--bg-input);padding:0.75rem 1.5rem;border-bottom:1px solid var(--border-subtle);font-size:0.85rem">
+      <div id="free-ship-text" style="margin-bottom:0.35rem">Add <strong>₹801</strong> more for FREE Shipping!</div>
+      <div style="height:6px;background:var(--bg-secondary);border-radius:3px;overflow:hidden">
+        <div id="free-ship-progress" style="height:100%;background:linear-gradient(90deg, var(--brand-cyan), var(--brand-emerald));width:46%;transition:width 0.3s ease"></div>
+      </div>
+    </div>
+
+    <div class="cart-body" id="cart-items-body">
+      <!-- Cart items injected by JS -->
+    </div>
+
+    <div class="cart-footer">
+      <!-- Coupon Box -->
+      <div style="display:flex;gap:0.5rem;margin-bottom:1rem">
+        <input type="text" id="coupon-input" class="form-control" placeholder="Promo code (e.g. CELLSTART20)" style="text-transform:uppercase" />
+        <button class="btn btn-secondary btn-sm" onclick="CellStart.applyCouponCode()">Apply</button>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">₹0</span>
+      </div>
+      <div class="cart-summary-line" style="color:var(--brand-emerald)">
+        <span>Coupon Discount</span>
+        <span id="cart-discount">-₹0</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Express Delivery</span>
+        <span id="cart-shipping">₹99</span>
+      </div>
+      <div class="cart-total-line">
+        <span>Estimated Total</span>
+        <span id="cart-total" style="color:var(--brand-cyan)">₹0</span>
+      </div>
+
+      <button id="checkout-btn" class="btn btn-primary btn-block" onclick="CellStart.openCheckoutModal()">Proceed to Checkout 🔒</button>
+    </div>
+  </aside>
+
+  <!-- Interactive Search Modal (Ctrl+K) -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content" style="max-width:560px">
+      <button class="modal-close" onclick="CellStart.closeSearchModal()">✕</button>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-modal-input" class="form-control" placeholder="Search GaN chargers, 100W cables, MagSafe..." oninput="CellStart.handleSearchInput(this.value)" />
+      </div>
+      <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.75rem">INSTANT RESULTS:</div>
+      <div id="search-modal-results" style="max-height:360px;overflow-y:auto">
+        <!-- Results injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Quick-View Modal -->
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-content" style="max-width:680px">
+      <button class="modal-close" onclick="document.getElementById('quickview-modal').classList.remove('open')">✕</button>
+      <div id="quickview-modal-body">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Checkout Modal -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-content" style="max-width:620px">
+      <button class="modal-close" onclick="CellStart.closeCheckoutModal()">✕</button>
+      <div id="checkout-modal-body">
+        <h2 style="font-family:var(--font-heading);font-size:1.6rem;margin-bottom:0.5rem">Fast Checkout</h2>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.5rem">Enter shipping address to complete your order.</p>
+
+        <div id="checkout-items-summary"></div>
+
+        <form onsubmit="CellStart.submitOrder(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input name="customerName" class="form-control" placeholder="e.g. Alex Kumar" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input name="customerEmail" type="email" class="form-control" placeholder="alex@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input name="customerPhone" class="form-control" placeholder="+91 98765 43210" required />
+            </div>
+            <div class="form-group">
+              <label>Payment Method</label>
+              <select name="paymentMethod" class="form-control">
+                <option value="upi">UPI / Instant QR Code</option>
+                <option value="card">Credit / Debit Card</option>
+                <option value="netbanking">Net Banking</option>
+                <option value="cod">Cash on Delivery</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Complete Shipping Address & Pincode *</label>
+            <textarea name="customerAddress" class="form-control" rows="2" placeholder="Flat / House No, Street, City, State, PIN" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:1rem">Place Order 🔒</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Tracking Modal -->
+  <div class="modal-overlay" id="tracking-modal">
+    <div class="modal-content" style="max-width:540px">
+      <button class="modal-close" onclick="document.getElementById('tracking-modal').classList.remove('open')">✕</button>
+      <div id="tracking-modal-body">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript bundle -->
+  <script src="js/main.js"></script>
+</body>
+</html>

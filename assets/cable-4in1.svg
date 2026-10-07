@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4in1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg4in1)" rx="16"/>
+
+  <!-- Main Cable Body -->
+  <path d="M 120,200 L 260,200" stroke="#0ea5e9" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Splitter Node -->
+  <circle cx="280" cy="200" r="24" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="280" y="204" text-anchor="middle" fill="#38bdf8" font-size="9" font-weight="bold">60W</text>
+
+  <!-- 4 Split Legs -->
+  <!-- Leg 1: Type-C -->
+  <path d="M 304,190 Q 370,110 440,110" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
+  <rect x="440" y="100" width="30" height="20" rx="4" fill="#334155" stroke="#38bdf8"/>
+  <text x="490" y="114" fill="#38bdf8" font-size="10" font-weight="bold">USB-C</text>
+
+  <!-- Leg 2: Lightning -->
+  <path d="M 304,195 Q 370,165 440,165" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <rect x="440" y="155" width="30" height="20" rx="4" fill="#334155" stroke="#f59e0b"/>
+  <text x="490" y="169" fill="#f59e0b" font-size="10" font-weight="bold">Lightning</text>
+
+  <!-- Leg 3: Micro-USB -->
+  <path d="M 304,205 Q 370,235 440,235" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round"/>
+  <rect x="440" y="225" width="30" height="20" rx="4" fill="#334155" stroke="#10b981"/>
+  <text x="490" y="239" fill="#10b981" font-size="10" font-weight="bold">Micro USB</text>
+
+  <!-- Leg 4: Type-C Extra -->
+  <path d="M 304,210 Q 370,290 440,290" fill="none" stroke="#a855f7" stroke-width="8" stroke-linecap="round"/>
+  <rect x="440" y="280" width="30" height="20" rx="4" fill="#334155" stroke="#a855f7"/>
+  <text x="490" y="294" fill="#a855f7" font-size="10" font-weight="bold">Type-C 2</text>
+
+  <rect x="400" y="30" width="170" height="32" rx="16" fill="rgba(245, 158, 11, 0.15)" stroke="#f59e0b" stroke-width="1"/>
+  <text x="485" y="51" text-anchor="middle" fill="#f59e0b" font-family="system-ui" font-size="12" font-weight="bold">🔌 4-IN-1 UNIVERSAL</text>
+</svg>

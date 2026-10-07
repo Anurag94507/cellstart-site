@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers & Internships — Join CellStart</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar-promo">
+    <span>🚀 We are hiring! Web Development, Hardware Engineering & Design roles open</span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.svg" alt="CellStart Logo" class="logo-icon" />
+        <span class="brand-text">Cell<span>Start</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="features.html">Technology</a>
+        <a href="shop.html">Shop</a>
+        <a href="testimonials.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle-btn">
+          <span id="theme-toggle-icon">☀️</span>
+        </button>
+        <button class="icon-btn" onclick="CellStart.openCart()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-badge" id="cart-count-badge" style="display:none">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Careers Section -->
+  <section class="section" style="padding-top:3.5rem">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-emerald" style="margin-bottom:0.5rem">🚀 Join Our Mission</div>
+        <h1 style="font-family:var(--font-heading);font-size:2.8rem;font-weight:900;margin-bottom:0.75rem">Build The Future of Mobile Power</h1>
+        <p>Work with passionate hardware creators, front-end engineers, and product designers building next-gen accessories.</p>
+      </div>
+
+      <!-- Roles Grid -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(340px, 1fr));gap:2rem;margin-bottom:4rem">
+        <div class="card">
+          <div class="badge badge-cyan" style="margin-bottom:1rem">Frontend & UI</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:0.5rem">Web Developer / Intern</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.25rem">Work on high-performance e-commerce experiences, interactive 3D product previews, Node.js microservices, and speed optimizations.</p>
+          <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem">📍 Remote / Bengaluru • Full-time / Internship</div>
+          <button class="btn btn-primary btn-block" onclick="openApplyModal('Web Developer Intern')">Apply Now →</button>
+        </div>
+
+        <div class="card">
+          <div class="badge badge-amber" style="margin-bottom:1rem">E-Commerce</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:0.5rem">Shopify / Full-Stack Engineer</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.25rem">Build custom headless storefronts, automated checkout workflows, and integrate REST/GraphQL logistics APIs.</p>
+          <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem">📍 Hybrid / Bengaluru • Full-time</div>
+          <button class="btn btn-primary btn-block" onclick="openApplyModal('Shopify Full-Stack Engineer')">Apply Now →</button>
+        </div>
+
+        <div class="card">
+          <div class="badge badge-purple" style="margin-bottom:1rem">Hardware & Power</div>
+          <h3 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:0.5rem">GaN Hardware QA Specialist</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.25rem">Run thermal dissipation bench-tests, USB-PD 3.1 protocol analysis, and mechanical fatigue endurance simulations.</p>
+          <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem">📍 Hardware Labs, Bengaluru • Full-time</div>
+          <button class="btn btn-primary btn-block" onclick="openApplyModal('GaN Hardware QA Specialist')">Apply Now →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply Modal -->
+  <div class="modal-overlay" id="apply-modal">
+    <div class="modal-content" style="max-width:580px">
+      <button class="modal-close" onclick="document.getElementById('apply-modal').classList.remove('open')">✕</button>
+      <h2 style="font-family:var(--font-heading);font-size:1.6rem;margin-bottom:0.35rem" id="apply-modal-role">Apply for Position</h2>
+      <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.5rem">Submit your details to the CellStart engineering team.</p>
+
+      <form onsubmit="submitJobApplication(event)">
+        <input type="hidden" name="role" id="apply-role-input" />
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input name="name" class="form-control" placeholder="e.g. Maya Patel" required />
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input name="email" type="email" class="form-control" placeholder="maya@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Portfolio / Website Link</label>
+          <input name="portfolio" class="form-control" placeholder="https://myportfolio.dev" />
+        </div>
+
+        <div class="form-group">
+          <label>GitHub / LinkedIn Profile</label>
+          <input name="github" class="form-control" placeholder="https://github.com/username" />
+        </div>
+
+        <div class="form-group">
+          <label>Why do you want to join CellStart?</label>
+          <textarea name="notes" class="form-control" rows="3" placeholder="Tell us about projects you have built or what excites you..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="apply-btn">Submit Application 🚀</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 CellStart Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Shopping Bag</h3>
+      <button class="icon-btn" onclick="CellStart.closeCart()">✕</button>
+    </div>
+    <div class="cart-body" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <button id="checkout-btn" class="btn btn-primary btn-block" onclick="CellStart.openCheckoutModal()">Proceed to Checkout 🔒</button>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+  <script>
+    function openApplyModal(roleName) {
+      document.getElementById('apply-modal-role').textContent = `Apply: ${roleName}`;
+      document.getElementById('apply-role-input').value = roleName;
+      document.getElementById('apply-modal').classList.add('open');
+    }
+
+    async function submitJobApplication(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('apply-btn');
+      btn.innerHTML = 'Submitting...';
+      btn.disabled = true;
+
+      const payload = {
+        name: form.name.value,
+        email: form.email.value,
+        role: form.role.value,
+        portfolio: form.portfolio.value,
+        github: form.github.value,
+        notes: form.notes.value
+      };
+
+      try {
+        const res = await fetch('/api/careers/apply', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          CellStart.showToast(data.message, 'success', 5000);
+          document.getElementById('apply-modal').classList.remove('open');
+          form.reset();
+        } else {
+          CellStart.showToast(data.message || 'Error submitting application', 'error');
+        }
+      } catch (err) {
+        CellStart.showToast('Network error submitting application', 'error');
+      } finally {
+        btn.innerHTML = 'Submit Application 🚀';
+        btn.disabled = false;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="msBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="aluminum" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="50%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="qiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="greenGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#msBg)" rx="16"/>
+
+  <!-- Base Plate Shadow -->
+  <ellipse cx="300" cy="345" rx="140" ry="24" fill="#020617" opacity="0.6"/>
+
+  <!-- Weighted Metal Base -->
+  <rect x="200" y="310" width="200" height="30" rx="15" fill="url(#aluminum)" stroke="#64748b" stroke-width="1.5"/>
+  <ellipse cx="300" cy="312" rx="90" ry="8" fill="#334155"/>
+
+  <!-- Angled Metal Stem -->
+  <path d="M 292,310 L 292,190 L 312,190 L 312,310 Z" fill="url(#aluminum)" stroke="#475569" stroke-width="1"/>
+
+  <!-- Charging Puck (Angled 60 deg) -->
+  <g transform="translate(302, 175) rotate(-15)">
+    <!-- Back Mount -->
+    <rect x="-65" y="-65" width="130" height="130" rx="65" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+    <!-- Front Silicone Ring Pad -->
+    <circle cx="0" cy="0" r="54" fill="#0f172a" stroke="rgba(16, 185, 129, 0.4)" stroke-width="2"/>
+    <!-- MagSafe Ring Vector -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#10b981" stroke-width="4" stroke-dasharray="24 6" filter="url(#greenGlow)"/>
+    <rect x="-3" y="24" width="6" height="18" rx="3" fill="#10b981" filter="url(#greenGlow)"/>
+
+    <!-- Qi2 Logo / Bolt -->
+    <circle cx="0" cy="0" r="14" fill="#1e293b"/>
+    <path d="M -4,-8 L 4,-8 L 0,0 L 5,0 L -3,8 L -1,1 L -5,1 Z" fill="#10b981"/>
+  </g>
+
+  <!-- Badge in corner -->
+  <rect x="420" y="30" width="150" height="32" rx="16" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1"/>
+  <text x="495" y="51" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="12" font-weight="bold">⚡ 15W Qi2 FAST</text>
+</svg>

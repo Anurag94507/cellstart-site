@@ -1,0 +1,741 @@
+{
+  "products": [
+    {
+      "id": "voltstation-140w",
+      "name": "VoltStation 140W 4-Port GaN Desktop Power Base",
+      "tagline": "Simultaneously fast-charges 2 MacBooks, iPad & iPhone",
+      "price": 4999,
+      "originalPrice": 6999,
+      "category": "chargers",
+      "categoryName": "GaN Chargers",
+      "rating": 4.9,
+      "reviewsCount": 215,
+      "inStock": true,
+      "stockCount": 40,
+      "badges": [
+        "Flagship 140W",
+        "PD 3.1 EPR"
+      ],
+      "image": "assets/charger-140w.svg",
+      "description": "Massive 140W USB-PD 3.1 desktop power station capable of charging a 16-inch MacBook Pro from 0 to 50% in just 28 minutes. Features dynamic power distribution across 3x USB-C ports and 1x USB-A port with active thermal monitoring.",
+      "specs": {
+        "Total Output": "140W Max Concurrent",
+        "Port Config": "3x USB-C (PD 3.1/PPS) + 1x USB-A (QC 4+)",
+        "Protocols": "PD 3.1 EPR (28V/5A), PPS, QC 4+, AFC, Apple 2.4A",
+        "Safety": "Dual NTC Temperature Sensor (3.2M checks/day)",
+        "AC Cable": "1.5m Detachable Heavy-Duty Braided Cord included"
+      },
+      "features": [
+        "Single-port 140W output powers high-draw 16-inch M3/M4 Max laptops",
+        "Powers 4 devices simultaneously with intelligent real-time wattage balancing",
+        "Internal copper cooling plate prevents thermal throttling during 24/7 load",
+        "Includes sturdy vertical desk stand and non-slip rubber silicone feet"
+      ]
+    },
+    {
+      "id": "voltmax-65w",
+      "name": "VoltMax 65W Dual GaN Fast Charger",
+      "tagline": "Pocket-sized beast for Laptops, Tablets & Phones",
+      "price": 2199,
+      "originalPrice": 2999,
+      "category": "chargers",
+      "categoryName": "GaN Chargers",
+      "rating": 4.9,
+      "reviewsCount": 142,
+      "inStock": true,
+      "stockCount": 45,
+      "badges": [
+        "Best Seller",
+        "GaN III Tech"
+      ],
+      "image": "assets/charger-65w.svg",
+      "description": "Engineered with third-generation Gallium Nitride (GaN) semiconductors, the VoltMax 65W delivers maximum power in a form factor 45% smaller than standard chargers.",
+      "specs": {
+        "Max Output": "65W Power Delivery",
+        "Port Config": "2x USB-C (PD 3.0 / PPS) + 1x USB-A (QC 4+)",
+        "Dimensions": "52 x 45 x 30 mm (Ultra-compact)",
+        "Weight": "115 grams",
+        "Protocols": "PD 3.0, PPS (3.3V-11V/4A), QC 4.0+, AFC, FCP"
+      },
+      "features": [
+        "Charges iPhone 15/16 from 0 to 60% in just 28 minutes",
+        "Powers a MacBook Air / Pro 13\" at full 65W speed",
+        "Intelligent power allocation splits wattage automatically",
+        "Foldable prongs for ultimate travel portability"
+      ]
+    },
+    {
+      "id": "voltnano-30w",
+      "name": "VoltNano 30W GaN Ultra-Mini Cube",
+      "tagline": "Coin-sized 30W fast-charger for iPhone, Galaxy & iPad",
+      "price": 1199,
+      "originalPrice": 1699,
+      "category": "chargers",
+      "categoryName": "GaN Chargers",
+      "rating": 4.8,
+      "reviewsCount": 98,
+      "inStock": true,
+      "stockCount": 75,
+      "badges": [
+        "Ultra-Mini",
+        "30W Fast"
+      ],
+      "image": "assets/charger-30w.svg",
+      "description": "70% smaller than an original 30W charger. Fits inside your coin pocket while delivering full 30W high-speed charging to iPhones, iPads, Galaxy devices, and Steam Deck.",
+      "specs": {
+        "Output": "30W Max USB-C PD 3.0 / PPS",
+        "Size": "28 x 28 x 30 mm (Coin size)",
+        "Weight": "38 grams",
+        "Thermal Guard": "ActiveShield 2.0 Micro-IC"
+      },
+      "features": [
+        "Charges iPhone to 50% in only 22 minutes",
+        "Foldable US/India pins prevent scratching items in bag",
+        "PPS protocol optimizes battery longevity for Samsung Galaxy"
+      ]
+    },
+    {
+      "id": "voltcore-27k",
+      "name": "VoltCore Max 27,650mAh 140W Laptop Power Reserve",
+      "tagline": "Massive airline-approved monster bank with HD Color Telemetry",
+      "price": 5499,
+      "originalPrice": 7999,
+      "category": "powerbanks",
+      "categoryName": "Power Banks",
+      "rating": 4.9,
+      "reviewsCount": 184,
+      "inStock": true,
+      "stockCount": 25,
+      "badges": [
+        "140W Beast",
+        "TFT Display"
+      ],
+      "image": "assets/powerbank-27k.svg",
+      "description": "The ultimate portable powerhouse. 27,650mAh (99.6Wh) high-density automotive-grade battery cells delivering up to 140W single-port laptop charging. High-definition color smart screen monitors individual port voltages, temperatures, and battery health in real time.",
+      "specs": {
+        "Capacity": "27,650mAh / 99.6Wh (TSA/Airline Legal Limit)",
+        "Max Output": "140W USB-PD 3.1 Single Port (Total 200W)",
+        "Recharge Time": "35 Mins to 80% (with 140W Input)",
+        "Screen": "1.3-inch Full Color Real-Time TFT Smart Meter"
+      },
+      "features": [
+        "Charges a MacBook Pro 16\" 1.3 times, iPhone 16 up to 5.5 times",
+        "Rapid 140W two-way recharge tops up the power bank in under 45 minutes",
+        "Pass-through charging allows simultaneous battery and device power",
+        "Anodized space titanium chassis with flame-retardant internal bracing"
+      ]
+    },
+    {
+      "id": "voltcore-20k",
+      "name": "VoltCore 20,000mAh 65W Power Delivery Bank",
+      "tagline": "Massive airline-approved reserve with live OLED telemetry",
+      "price": 3299,
+      "originalPrice": 4499,
+      "category": "powerbanks",
+      "categoryName": "Power Banks",
+      "rating": 4.9,
+      "reviewsCount": 164,
+      "inStock": true,
+      "stockCount": 35,
+      "badges": [
+        "Flight Approved",
+        "OLED Screen"
+      ],
+      "image": "assets/powerbank.svg",
+      "description": "High-density 20,000mAh power bank delivering up to 65W single-port laptop charging. Features an ultra-crisp OLED display showing live input/output wattage, voltage, battery health, and estimated time remaining.",
+      "specs": {
+        "Capacity": "20,000mAh / 74Wh (TSA & DGCA Airline Approved)",
+        "Max Single Port Output": "65W USB-C PD 3.0",
+        "Total Combined Output": "85W Simultaneous Multi-Device",
+        "Display": "0.96-inch OLED Real-Time Power Monitor"
+      },
+      "features": [
+        "Charges iPhone 15/16 up to 4.5 times, MacBook Air 1.2 times",
+        "Pass-through charging lets you charge the bank and devices simultaneously",
+        "Aircraft-grade brushed aluminum enclosure"
+      ]
+    },
+    {
+      "id": "magpack-10k",
+      "name": "MagPack Slim 10,000mAh Magnetic Power Bank",
+      "tagline": "Snap-on 15W Qi2 wireless bank with built-in zinc kickstand",
+      "price": 2299,
+      "originalPrice": 3299,
+      "category": "powerbanks",
+      "categoryName": "Power Banks",
+      "rating": 4.8,
+      "reviewsCount": 115,
+      "inStock": true,
+      "stockCount": 50,
+      "badges": [
+        "Qi2 MagSafe",
+        "Zinc Stand"
+      ],
+      "image": "assets/powerbank-magsafe.svg",
+      "description": "Ultra-slim 14mm magnetic battery pack that snaps firmly to iPhone 12/13/14/15/16 and Qi2 devices. Features an integrated fold-out zinc alloy kickstand for hands-free video calls and movie watching.",
+      "specs": {
+        "Capacity": "10,000mAh Li-Polymer Reserve",
+        "Wireless Output": "15W Qi2 Fast Wireless",
+        "Wired USB-C": "20W Power Delivery in/out",
+        "Thickness": "Only 14.5mm Ultra-Slim"
+      },
+      "features": [
+        "Strong N52 neodymium magnets hold through thick cases",
+        "Foldable zinc kickstand props phone in portrait or landscape mode",
+        "Charge 2 devices at once (1 wirelessly + 1 via USB-C cable)"
+      ]
+    },
+    {
+      "id": "powerweave-100w",
+      "name": "PowerWeave 100W Ballistic Braided USB-C Cable (2m)",
+      "tagline": "Military-grade durability with 100W E-Marker smart delivery",
+      "price": 699,
+      "originalPrice": 999,
+      "category": "cables",
+      "categoryName": "Cables",
+      "rating": 4.8,
+      "reviewsCount": 320,
+      "inStock": true,
+      "stockCount": 120,
+      "badges": [
+        "Tough As Nails",
+        "E-Marker Chip"
+      ],
+      "image": "assets/cable-100w.svg",
+      "description": "Double-braided with ballistic nylon and reinforced with DuPont Kevlar fibers. Tested through over 30,000 extreme 90-degree bends without a single fray.",
+      "specs": {
+        "Length": "2.0 Meters (6.6 Feet)",
+        "Max Power Delivery": "100W (20V / 5A)",
+        "Data Transfer": "480 Mbps Hi-Speed Sync",
+        "Bend Rating": "30,000+ Severe Flex Cycles"
+      },
+      "features": [
+        "Smart E-Marker safety chip dynamically regulates voltage and amperage",
+        "Reinforced 18mm strain relief collar prevents plug breakage",
+        "Universal full-speed compatibility with Android, iOS, iPad, & Mac"
+      ]
+    },
+    {
+      "id": "flexguard-240w",
+      "name": "FlexGuard 240W Liquid Silicone Hyper-Flex Cable (1.2m)",
+      "tagline": "Tangle-free, cloud-soft touch with ultra-future 240W EPR",
+      "price": 799,
+      "originalPrice": 1199,
+      "category": "cables",
+      "categoryName": "Cables",
+      "rating": 4.8,
+      "reviewsCount": 110,
+      "inStock": true,
+      "stockCount": 85,
+      "badges": [
+        "240W EPR Ready",
+        "Liquid Silicone"
+      ],
+      "image": "assets/cable-silicone.svg",
+      "description": "Made with medical-grade liquid silicone that feels silky smooth and never tangles, kinks, or curls in your pocket. Upgraded with USB-PD 3.1 Extended Power Range (EPR) rated for 240W.",
+      "specs": {
+        "Power Rating": "240W Max (48V / 5A EPR Support)",
+        "Length": "1.2 Meters (4 Feet)",
+        "Material": "Skin-friendly Liquid Silicone + Zinc Heads"
+      },
+      "features": [
+        "Zero memory effect: unrolls flat instantly every single time",
+        "Future-proof for next-gen 240W gaming laptops and workstations",
+        "Includes molded magnetic snap tie for effortless storage"
+      ]
+    },
+    {
+      "id": "omnicable-4in1",
+      "name": "OmniCable 60W Universal 4-in-1 Braided Multi-Cord",
+      "tagline": "One single cable with USB-C, Lightning & Micro-USB plugs",
+      "price": 599,
+      "originalPrice": 899,
+      "category": "cables",
+      "categoryName": "Cables",
+      "rating": 4.7,
+      "reviewsCount": 140,
+      "inStock": true,
+      "stockCount": 95,
+      "badges": [
+        "4-in-1 Universal",
+        "60W Fast"
+      ],
+      "image": "assets/cable-4in1.svg",
+      "description": "Never carry separate cables again. Features dual USB-C, Apple Lightning, and Micro-USB tips reinforced with aluminum alloy housings and anti-tangle nylon braiding.",
+      "specs": {
+        "Output": "60W PD (Type-C to Type-C) / 20W Lightning / 12W Micro",
+        "Length": "1.2 Meters (4 ft)",
+        "Connectors": "Type-C, Lightning, Micro-USB, USB-A"
+      },
+      "features": [
+        "Charge any phone or accessory with a single cord",
+        "Intelligent power IC protects older Micro-USB accessories",
+        "Reinforced braided jacket resists pets, tugs, and daily wear"
+      ]
+    },
+    {
+      "id": "magflow-3in1",
+      "name": "MagFlow 3-in-1 Magnetic Charging Tree",
+      "tagline": "Powers iPhone 15W, Apple Watch & AirPods simultaneously",
+      "price": 3499,
+      "originalPrice": 4999,
+      "category": "wireless",
+      "categoryName": "Wireless & MagSafe",
+      "rating": 4.9,
+      "reviewsCount": 130,
+      "inStock": true,
+      "stockCount": 28,
+      "badges": [
+        "3-in-1 Station",
+        "15W Qi2"
+      ],
+      "image": "assets/magsafe-3in1.svg",
+      "description": "Declutter your nightstand and desk with our aerospace-grade 3-in-1 magnetic charging tree. Delivers official 15W Qi2 fast charging to your phone, dedicated Apple Watch magnetic puck, and 5W AirPods wireless tray.",
+      "specs": {
+        "Phone Qi2": "15W Magnetic Alignment",
+        "Watch Output": "5W Fast Watch Puck",
+        "Earbuds Pad": "5W Wireless Indentation Tray",
+        "Base": "Weighted Heavy Zinc Alloy with Anti-Slip Pad"
+      },
+      "features": [
+        "Full support for Apple Standby & Nightstand clock display modes",
+        "Space-saving floating design lifts devices cleanly off your desk",
+        "Includes high-power 36W wall brick and braided cable in the box"
+      ]
+    },
+    {
+      "id": "magflow-15w",
+      "name": "MagFlow 15W Qi2 Magnetic Fast Wireless Stand",
+      "tagline": "Snap-on magnetic charging with aerospace aluminum styling",
+      "price": 2499,
+      "originalPrice": 3499,
+      "category": "wireless",
+      "categoryName": "Wireless & MagSafe",
+      "rating": 4.9,
+      "reviewsCount": 88,
+      "inStock": true,
+      "stockCount": 30,
+      "badges": [
+        "Qi2 Certified",
+        "15W MagSafe"
+      ],
+      "image": "assets/magsafe-stand.svg",
+      "description": "Official Qi2 fast wireless stand crafted from precision CNC-machined aerospace aluminum.",
+      "specs": {
+        "Wireless Standard": "Qi2 & Apple MagSafe Certified",
+        "Max Output": "15W Ultra-Fast Wireless",
+        "Viewing Angle": "60° Ergonomic Tilt",
+        "Base Weight": "240g Weighted Zinc Anti-Slip Base"
+      },
+      "features": [
+        "16 high-grade N52 neodymium magnets hold phones securely",
+        "Advanced heatsink design keeps phone and coils cool",
+        "Includes a premium 1.5m braided USB-C cable"
+      ]
+    },
+    {
+      "id": "car-mount-qi",
+      "name": "AutoDrive 15W Smart Auto-Clamping Qi Car Mount",
+      "tagline": "Motorized sensor clamps phone automatically with 15W Fast Qi",
+      "price": 1899,
+      "originalPrice": 2799,
+      "category": "wireless",
+      "categoryName": "Wireless & MagSafe",
+      "rating": 4.8,
+      "reviewsCount": 78,
+      "inStock": true,
+      "stockCount": 42,
+      "badges": [
+        "Motorized Grip",
+        "15W Car Qi"
+      ],
+      "image": "assets/car-mount.svg",
+      "description": "Infrared smart sensor detects your phone and automatically clamps the motorized arms tightly in place. Built-in supercapacitor opens the arms even after your car engine is turned off.",
+      "specs": {
+        "Charging Output": "15W Qi Fast Wireless",
+        "Mounting Options": "Air Vent Clip + 360° Dashboard Suction Arm",
+        "Backup Power": "Built-in Supercapacitor for delayed release"
+      },
+      "features": [
+        "Automatic sensor motorized clamping prevents drops on bumpy roads",
+        "360-degree ball joint allows seamless GPS navigation orientation",
+        "Internal cooling fan protects phone from sun heat"
+      ]
+    },
+    {
+      "id": "aerobuds-pro",
+      "name": "AeroBuds Pro Hybrid 48dB Active Noise Cancelling Earbuds",
+      "tagline": "Studio-grade titanium drivers with 40-hour battery & spatial audio",
+      "price": 3899,
+      "originalPrice": 5999,
+      "category": "audio",
+      "categoryName": "Audio & Electronics",
+      "rating": 4.9,
+      "reviewsCount": 160,
+      "inStock": true,
+      "stockCount": 38,
+      "badges": [
+        "48dB Hybrid ANC",
+        "Spatial Audio"
+      ],
+      "image": "assets/earbuds-anc.svg",
+      "description": "Immerse yourself in pure studio sound with 48dB hybrid active noise cancellation, 11mm custom titanium-diaphragm drivers, 6-mic AI clear voice calling, and wireless charging case.",
+      "specs": {
+        "Noise Cancellation": "48dB Hybrid ANC + Transparency Mode",
+        "Battery Life": "10 Hours (Earbuds) / 40 Hours (with Case)",
+        "Bluetooth": "5.4 with Dual-Device Multipoint",
+        "Water Resistance": "IPX5 Sweat & Splash Guard"
+      },
+      "features": [
+        "Spatial Audio with dynamic head tracking for theater immersion",
+        "Fast Charge: 10 mins charge gives 3 hours of playtime",
+        "Qi wireless charging compatible case"
+      ]
+    },
+    {
+      "id": "soundpulse-360",
+      "name": "SoundPulse 360 IPX7 Waterproof Bluetooth Speaker",
+      "tagline": "30W deep bass punch with 24-hour party battery life",
+      "price": 2799,
+      "originalPrice": 3999,
+      "category": "audio",
+      "categoryName": "Audio & Electronics",
+      "rating": 4.8,
+      "reviewsCount": 92,
+      "inStock": true,
+      "stockCount": 44,
+      "badges": [
+        "IPX7 Floating",
+        "30W Deep Bass"
+      ],
+      "image": "assets/speaker-bt.svg",
+      "description": "Rugged cylindrical waterproof speaker with dual passive bass radiators, 360-degree room-filling acoustic drivers, and party broadcast pairing mode.",
+      "specs": {
+        "Output Power": "30W Peak Stereo Audio",
+        "Battery": "24 Hours Continuous Playtime",
+        "Waterproof": "IPX7 Submersible & Floating Guard",
+        "TWS Pairing": "Link 2 speakers for wireless stereo"
+      },
+      "features": [
+        "Floats on water — perfect for pool parties and beach trips",
+        "USB-C reverse charging doubles as an emergency power bank",
+        "Durable shockproof rubber armor bumpers"
+      ]
+    },
+    {
+      "id": "dock-10in1",
+      "name": "ProHub 10-in-1 Dual 4K USB-C Docking Station",
+      "tagline": "Dual 4K 60Hz HDMI, Gigabit Ethernet, 100W PD & SD Reader",
+      "price": 3699,
+      "originalPrice": 4999,
+      "category": "hubs",
+      "categoryName": "Hubs & Docks",
+      "rating": 4.9,
+      "reviewsCount": 105,
+      "inStock": true,
+      "stockCount": 35,
+      "badges": [
+        "Dual 4K 60Hz",
+        "10-in-1 Hub"
+      ],
+      "image": "assets/dock-10in1.svg",
+      "description": "Transform a single laptop USB-C port into a full workstation. Features dual 4K 60Hz HDMI video outputs, 1Gbps Ethernet, 3x USB 3.2 10Gbps ports, SD/TF UHS-I slots, and 100W Power Delivery pass-through.",
+      "specs": {
+        "Video Output": "Dual 4K @ 60Hz HDMI (MST / SST)",
+        "Ethernet": "1000 Mbps RJ45 Gigabit LAN",
+        "Data Ports": "3x USB-A 3.2 (10Gbps) + USB-C Data (10Gbps)",
+        "Power Input": "100W USB-C Power Delivery 3.0"
+      },
+      "features": [
+        "Connect two 4K external monitors to MacBook and Windows laptops",
+        "Cast aluminum chassis acts as a thermal heatsink for cool operation",
+        "Plug-and-play with zero driver installation required"
+      ]
+    },
+    {
+      "id": "omnipack-travel",
+      "name": "OmniPack 65W GaN Universal Travel Adapter Kit",
+      "tagline": "Charge anywhere in 150+ countries with 65W PD",
+      "price": 1499,
+      "originalPrice": 1999,
+      "category": "hubs",
+      "categoryName": "Hubs & Docks",
+      "rating": 4.7,
+      "reviewsCount": 95,
+      "inStock": true,
+      "stockCount": 60,
+      "badges": [
+        "Global Ready",
+        "4-Port Output"
+      ],
+      "image": "assets/travel-adapter.svg",
+      "description": "The world's most versatile travel adapter. Integrates US, UK, EU, and AU slide-out plugs with a built-in 65W GaN charger that powers laptops and phones simultaneously.",
+      "specs": {
+        "Countries Supported": "150+ (US, UK, EU, AU, JP, Asia, Middle East)",
+        "AC Rating": "100-250V ~ 8A Max (2000W Max)",
+        "USB Output": "65W USB-C PD + 2x USB-C + 1x USB-A"
+      },
+      "features": [
+        "All-in-one slider mechanism locks firmly into any international wall socket",
+        "Self-healing auto-resetting fuse protects against voltage surges",
+        "Comes with a protective shockproof EVA travel pouch"
+      ]
+    },
+    {
+      "id": "armor-case-magsafe",
+      "name": "ArmorShield 15ft Drop-Tested MagSafe Shockproof Case",
+      "tagline": "Military-spec air cushion corners with 360° camera guard lip",
+      "price": 899,
+      "originalPrice": 1299,
+      "category": "protection",
+      "categoryName": "Protection & Cases",
+      "rating": 4.8,
+      "reviewsCount": 240,
+      "inStock": true,
+      "stockCount": 110,
+      "badges": [
+        "15ft Drop Tested",
+        "MagSafe Ring"
+      ],
+      "image": "assets/case-armor.svg",
+      "description": "Built for maximum impact protection. Multi-layered polycarbonate with shock-absorbing TPU honeycomb corners, raised 1.5mm camera lens bezel, and strong integrated MagSafe ring.",
+      "specs": {
+        "Drop Standard": "MIL-STD-810G (15ft Severe Drop Tested)",
+        "Materials": "Bayer Polycarbonate + German Bayer TPU",
+        "MagSafe": "Strong 13N Magnetic Attraction Force"
+      },
+      "features": [
+        "Anti-yellowing UV barrier stays crystal clear for over 18 months",
+        "Air-cushion corner airbags absorb 95% of shock forces on concrete",
+        "Precision tactile aluminum side button overlays"
+      ]
+    },
+    {
+      "id": "diamond-screen-guard",
+      "name": "DiamondGuard 9H Tempered Glass Screen Protector Kit (2-Pack)",
+      "tagline": "5-second dust-free auto-alignment installation tray",
+      "price": 499,
+      "originalPrice": 799,
+      "category": "protection",
+      "categoryName": "Protection & Cases",
+      "rating": 4.9,
+      "reviewsCount": 310,
+      "inStock": true,
+      "stockCount": 150,
+      "badges": [
+        "9H Hardness",
+        "Auto-Align Tray"
+      ],
+      "image": "assets/screen-guard.svg",
+      "description": "Double-tempered Japanese aluminosilicate glass with electroplated oleophobic coating. Comes with our patented foolproof alignment frame that applies the protector with zero bubbles in 5 seconds.",
+      "specs": {
+        "Hardness": "9H Diamond Scratch Resistance",
+        "Clarity": "99.99% Ultra-HD Optical Transparency",
+        "Coating": "Dual-Layer Electroplated Oleophobic Fingerprint Oil Barrier"
+      },
+      "features": [
+        "Foolproof alignment tray eliminates dust and bubble alignment headaches",
+        "Edge-to-edge 2.5D curved seamless touch feeling",
+        "Includes 2x tempered glass shields, 2x cleaning wipes & dust pullers"
+      ]
+    },
+    {
+      "id": "cable-clips-5pack",
+      "name": "MagClip Silicone Magnetic Cable Management System (5-Pack)",
+      "tagline": "Keep cables neatly docked on desk, bedside & car dashboard",
+      "price": 349,
+      "originalPrice": 599,
+      "category": "essentials",
+      "categoryName": "Small Essentials",
+      "rating": 4.8,
+      "reviewsCount": 195,
+      "inStock": true,
+      "stockCount": 180,
+      "badges": [
+        "5-Pack",
+        "Magnetic Dock"
+      ],
+      "image": "assets/cable-organizer.svg",
+      "description": "Stop chasing dropped cables behind your desk. Premium soft-touch silicone magnetic clips snap onto any standard cable and lock cleanly into the included magnetic desk base bar.",
+      "specs": {
+        "Package Contents": "5x Magnetic Cable Collars + 1x Magnetic Base Bar",
+        "Adhesive": "Residue-free 3M Acrylic Gel Tape (Washable & Reusable)",
+        "Cable Fit": "Fits all cables from 2.5mm to 6.5mm diameter"
+      },
+      "features": [
+        "Keeps phone, laptop, and headphone cords organized within easy reach",
+        "Strong neodymium magnetic lock holds cables firmly in place",
+        "Leaves zero residue when repositioned on wood, glass, or metal desks"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev_1",
+      "author": "Aarav Sharma",
+      "location": "Bengaluru, India",
+      "verified": true,
+      "rating": 5,
+      "product": "VoltStation 140W 4-Port GaN Desktop Power Base",
+      "date": "2026-09-28",
+      "title": "Replaced 4 bricks on my developer desk!",
+      "comment": "This 140W station powers my 16-inch M3 MacBook Pro, 4K monitor, and phone without breaking a sweat. Stays completely cool even after compiling code all day."
+    },
+    {
+      "id": "rev_2",
+      "author": "Priya Nambiar",
+      "location": "Mumbai, India",
+      "verified": true,
+      "rating": 5,
+      "product": "PowerWeave 100W Ballistic Braided USB-C Cable",
+      "date": "2026-09-25",
+      "title": "Finally a cable that lasts forever",
+      "comment": "The build quality on the PowerWeave is phenomenal. Tested 100W charging on my laptop and it hit maximum speeds immediately."
+    },
+    {
+      "id": "rev_3",
+      "author": "Rohan Deshmukh",
+      "location": "Pune, India",
+      "verified": true,
+      "rating": 5,
+      "product": "MagFlow 3-in-1 Magnetic Charging Tree",
+      "date": "2026-09-20",
+      "title": "Sleek, heavy base, looks like an Apple OEM accessory",
+      "comment": "The aluminum construction has some serious heft so it doesn't lift off my desk. Charges my iPhone, Apple Watch and AirPods at once."
+    },
+    {
+      "id": "rev_4",
+      "author": "Sneha Sen",
+      "location": "Kolkata, India",
+      "verified": true,
+      "rating": 5,
+      "product": "VoltCore Max 27,650mAh 140W Power Reserve",
+      "date": "2026-09-15",
+      "title": "TFT screen is so useful during travel flights",
+      "comment": "Knowing the exact wattage input and output gives so much peace of mind. Charged my laptop during a 4-hour flight with plenty of juice left over."
+    },
+    {
+      "id": "rev_5",
+      "author": "Kavita Reddy",
+      "location": "Hyderabad, India",
+      "verified": true,
+      "rating": 5,
+      "product": "AeroBuds Pro Hybrid 48dB ANC Earbuds",
+      "date": "2026-09-10",
+      "title": "ANC is insane on flights and metro commutes",
+      "comment": "Cuts out all engine noise completely. Sound quality is rich with punchy bass and spatial audio is mindblowing on movie tracks."
+    }
+  ],
+  "orders": [
+    {
+      "id": "CS-52774",
+      "date": "2026-10-06T05:09:34.622Z",
+      "customer": {
+        "name": "Anurag Mishra",
+        "email": "mranurag0007@gmail.com",
+        "phone": "7800509636",
+        "address": "sultanpur 227805"
+      },
+      "items": [
+        {
+          "id": "aerobuds-pro",
+          "name": "AeroBuds Pro Hybrid 48dB ANC Earbuds",
+          "price": 3899,
+          "qty": 1
+        }
+      ],
+      "subtotal": 3899,
+      "discount": 780,
+      "couponApplied": "CELLSTART20",
+      "shipping": 0,
+      "total": 3119,
+      "paymentMethod": "upi",
+      "paymentStatus": "Paid (Verified)",
+      "transactionId": "TXN-UPI-1791263374622",
+      "status": "Confirmed",
+      "trackingNumber": "TRK-IND-1619364",
+      "estimatedDelivery": "2-3 Business Days via Express Air",
+      "upiPayUri": "upi://pay?pa=cellstart.pay@upi&pn=CellStart%20Technologies&am=3119&cu=INR&tn=Order%20CS-52774",
+      "timeline": [
+        {
+          "status": "Payment Received & Verified",
+          "time": "Just now",
+          "done": true
+        },
+        {
+          "status": "Allocating in Automated Warehouse",
+          "time": "Pending",
+          "done": false
+        },
+        {
+          "status": "Handed to Courier Partner",
+          "time": "Upcoming",
+          "done": false
+        },
+        {
+          "status": "Out for Delivery",
+          "time": "Upcoming",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "CS-83047",
+      "date": "2026-10-06T04:57:26.772Z",
+      "customer": {
+        "name": "Anurag Mishra",
+        "email": "mranurag0007@gmail.com",
+        "phone": "7800509636",
+        "address": "sultanpur 227805"
+      },
+      "items": [
+        {
+          "id": "powerweave-100w",
+          "name": "PowerWeave 100W Ballistic Braided USB-C Cable",
+          "price": 699,
+          "image": "assets/cable-100w.svg",
+          "qty": 1
+        }
+      ],
+      "subtotal": 699,
+      "discount": 0,
+      "couponApplied": null,
+      "shipping": 99,
+      "total": 798,
+      "paymentMethod": "upi",
+      "paymentStatus": "Paid (Verified)",
+      "transactionId": "UPI-IND-8849204820",
+      "status": "Confirmed",
+      "trackingNumber": "TRK-IND-5452637",
+      "estimatedDelivery": "2-3 Business Days via Express Air",
+      "timeline": [
+        {
+          "status": "Order Confirmed & Payment Received",
+          "time": "Just now",
+          "done": true
+        },
+        {
+          "status": "Allocating in Automated Warehouse",
+          "time": "Pending",
+          "done": false
+        },
+        {
+          "status": "Handed to Courier Partner",
+          "time": "Upcoming",
+          "done": false
+        },
+        {
+          "status": "Out for Delivery",
+          "time": "Upcoming",
+          "done": false
+        }
+      ]
+    }
+  ],
+  "messages": [],
+  "applications": [],
+  "subscribers": [
+    "user@example.com",
+    "mranurag0007@gmail.com"
+  ]
+}
